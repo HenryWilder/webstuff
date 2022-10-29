@@ -6,3 +6,7 @@ body {
 .copy-panel {
     font-size: 12;
 }
+
+.nav-button {
+    font-weight: bold;
+}

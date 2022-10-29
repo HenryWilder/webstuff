@@ -1,0 +1,52 @@
+:root {
+    --main-color: #218acf;
+    --hover-main-color: #39a4eb;
+    --nav-bar-color: #103ea170;
+    --nav-bar-shadows-color: #254486a2;
+    --nav-bar-shadow-cast-color: #366c97;
+}
+
+body {
+    background-color: #ab8e6c;
+    background-image: url("../resource/concrete.png");
+    background-position: top;
+    background-size: cover;
+}
+
+.copy-panel {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px 4px #00000030;
+}
+
+.title-bar {
+    background-color: #254486;
+    color: white;
+}
+
+.nav-bar {
+    background-color: var(--nav-bar-color);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: 0.4s;
+}
+.nav-bar:hover {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.637);
+}
+
+.nav-button {
+    background-color: #00000000;
+    color: whitesmoke;
+    border: 2pt solid whitesmoke;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.nav-button:hover {
+    background-color: var(--main-color);
+    color: white;
+    border: 2pt solid var(--main-color);
+    transition: 0.1s;
+    box-shadow: 0px 4px 5px 2px var(--nav-bar-shadows-color);
+}
