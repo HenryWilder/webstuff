@@ -1,6 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: lightblue;
-    background-attachment: fixed;
 }
 
 h1 {
@@ -16,27 +21,42 @@ p {
 :root {
     --main-color: #218acf;
     --hover-main-color: #39a4eb;
+    --nav-bar-color: #103ea170;
     --nav-bar-shadows-color: #254486;
-    --nav-bar-color: #3558a3;
+    --nav-bar-shadow-cast-color: #366c97;
+}
+
+.nav-bar {
+    background-color: var(--nav-bar-color);
+    position: fixed;
+    width: 100%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    padding: 8px 8px;
+    transition: 0.4s;
+}
+.nav-bar:hover {
+    box-shadow: 0px 1px 10px 2px var(--nav-bar-shadow-cast-color);
 }
 
 .nav-button {
-    background-color: var(--nav-bar-color);
-    color: white;
-    border: 2pt solid white;
+    background-color: #00000000;
+    color: whitesmoke;
+    border: 2pt solid whitesmoke;
     font-size: 16pt;
     padding: 8px 16px;
-    margin: 8px 4px;
+    margin: 8px 8px;
     font-family: sans-serif;
     cursor: pointer;
     border-radius: 4px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .nav-button:hover {
     background-color: var(--main-color);
-    color: whitesmoke;
+    color: white;
     border: 2pt solid var(--main-color);
-    transition: 0.2s;
+    border-radius: 25px;
+    transition: 0.1s;
     box-shadow: 0px 4px 5px 2px var(--nav-bar-shadows-color);
 }
