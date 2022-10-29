@@ -28,7 +28,7 @@ p {
 
 .nav-bar {
     background-color: var(--nav-bar-color);
-    position: fixed;
+    position: sticky;
     width: 100%;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
@@ -43,10 +43,11 @@ p {
     background-color: #00000000;
     color: whitesmoke;
     border: 2pt solid whitesmoke;
-    font-size: 16pt;
+    font-size: 12pt;
     padding: 8px 16px;
     margin: 8px 8px;
     font-family: sans-serif;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
     transition: 0.3s;
