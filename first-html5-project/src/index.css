@@ -5,7 +5,7 @@
 
 .fa {
     color: #00000000;
-    -webkit-text-stroke-width: 1pt;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     font-size: 2em;
     width: 1em;
@@ -16,7 +16,7 @@
 
 .fa:hover {
     color: var(--main-color);
-    -webkit-text-stroke-width: 1pt;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #0080FF00;
     text-shadow: 0px 4px 4px var(--nav-bar-shadows-color);
 }

@@ -28,7 +28,7 @@ body {
     background-color: var(--nav-bar-color);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    transition: 0.4s;
+    transition: 0.25s;
 }
 .nav-bar:hover {
     -webkit-backdrop-filter: blur(10px);
