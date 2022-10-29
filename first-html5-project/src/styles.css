@@ -13,10 +13,7 @@ p {
     font-size: 20px;
 }
 
-input[type=submit] {
-    background-color: #218acf;
-    animation-name: button-unhover;
-    animation-duration: 0.2s;
+.nav-button {
     color: white;
     border: none;
     font-size: 16pt;
@@ -24,6 +21,12 @@ input[type=submit] {
     margin: 12px 20px;
     font-family: sans-serif;
     cursor: pointer;
+}
+
+.nav-button {
+    background-color: #218acf;
+    animation-name: button-unhover;
+    animation-duration: 0.4s;
 }
 
 @keyframes button-unhover {
@@ -31,17 +34,10 @@ input[type=submit] {
     to {background-color: #218acf;}
 }
 
-input[type=submit]:hover {
+.nav-button:hover {
     background-color: #39a4eb;
     animation-name: button-hover;
-    animation-duration: 0.2s;
-    color: white;
-    border: none;
-    font-size: 16pt;
-    padding: 8px 16px;
-    margin: 12px 20px;
-    font-family: sans-serif;
-    cursor: pointer;
+    animation-duration: 0.1s;
 }
 
 @keyframes button-hover {
