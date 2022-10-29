@@ -1,32 +1,11 @@
+@import "./styles/colors.css";
+@import "./styles/typography.css";
+@import "./styles/layout.css";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(180, 160, 133);
-    background-image: url("./resource/concrete.png");
-    background-position: top;
-    background-size: cover;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-
-:root {
-    --main-color: #218acf;
-    --hover-main-color: #39a4eb;
-    --nav-bar-color: #103ea170;
-    --nav-bar-shadows-color: #254486a2;
-    --nav-bar-shadow-cast-color: #366c97;
 }
 
 .title-bar {
@@ -66,7 +45,6 @@ p {
     border-radius: 4px;
     transition: 0.3s;
 }
-
 .nav-button:hover {
     background-color: var(--main-color);
     color: white;
