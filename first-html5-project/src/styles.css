@@ -1,5 +1,6 @@
 body {
     background-color: lightblue;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -10,4 +11,40 @@ h1 {
 p {
     font-family: verdana;
     font-size: 20px;
+}
+
+input[type=submit] {
+    background-color: #218acf;
+    animation-name: button-unhover;
+    animation-duration: 0.2s;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    padding: 8px 16px;
+    margin: 12px 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+@keyframes button-unhover {
+    from {background-color: #39a4eb;}
+    to {background-color: #218acf;}
+}
+
+input[type=submit]:hover {
+    background-color: #39a4eb;
+    animation-name: button-hover;
+    animation-duration: 0.2s;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    padding: 8px 16px;
+    margin: 12px 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+@keyframes button-hover {
+    from {background-color: #218acf;}
+    to {background-color: #39a4eb;}
 }
