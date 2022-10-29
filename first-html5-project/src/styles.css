@@ -13,34 +13,30 @@ p {
     font-size: 20px;
 }
 
+:root {
+    --main-color: #218acf;
+    --hover-main-color: #39a4eb;
+    --nav-bar-shadows-color: #254486;
+    --nav-bar-color: #3558a3;
+}
+
 .nav-button {
+    background-color: var(--nav-bar-color);
     color: white;
-    border: none;
+    border: 2pt solid white;
     font-size: 16pt;
     padding: 8px 16px;
-    margin: 12px 20px;
+    margin: 8px 4px;
     font-family: sans-serif;
     cursor: pointer;
-}
-
-.nav-button {
-    background-color: #218acf;
-    animation-name: button-unhover;
-    animation-duration: 0.4s;
-}
-
-@keyframes button-unhover {
-    from {background-color: #39a4eb;}
-    to {background-color: #218acf;}
+    border-radius: 4px;
+    transition: 0.4s;
 }
 
 .nav-button:hover {
-    background-color: #39a4eb;
-    animation-name: button-hover;
-    animation-duration: 0.1s;
-}
-
-@keyframes button-hover {
-    from {background-color: #218acf;}
-    to {background-color: #39a4eb;}
+    background-color: var(--main-color);
+    color: whitesmoke;
+    border: 2pt solid var(--main-color);
+    transition: 0.2s;
+    box-shadow: 0px 4px 5px 2px var(--nav-bar-shadows-color);
 }
