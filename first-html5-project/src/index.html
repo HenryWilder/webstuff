@@ -6,37 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="openCity(event, 'Test')">
     <header>
         <div class="title-bar">
             <p>Henry Wilder</p>
         </div>
+    </header>
+    <nav>
         <div class="nav-bar">
             <table>
                 <tr>
-                    <td>
-                        <a class="fa fa-github" href="https://github.com/HenryWilder" target="_blank"></a>
-                    </td>
-                    <td>
-                        <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/henry-wilder/" target="_blank"></a>
-                    </td>
-                    <td>
-                        <a class="fa icon-open-mouth" href="about:blank" target="_blank"></a>
-                    </td>
+                    <!-- GitHub link -->
+                    <td><a class="fa fa-github" href="https://github.com/HenryWilder" target="_blank"></a></td>
+                    <!-- LinkedIn link -->
+                    <td><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/henry-wilder/" target="_blank"></a></td>
+                    <!-- Skill grid -->
+                    <td><a class="fa icon-open-mouth" href="about:blank" target="_blank"></a></td>
                 </tr>
             </table>
         </div>
-    </header>
-    <section>
-        <div style="width: fit-content;">
-            <div class="copy-panel">
-                <p>Test</p>
-            </div>
-            <div class="copy-panel">
-                <p>this has a lot of extra text blah blah blah blah blah</p>
-            </div>
-        </div>
-    </section>
+    </nav>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Test')">Test</button>
+        <button class="tablinks" onclick="openCity(event, 'Test2')">Test 2</button>
+        <button class="tablinks" onclick="openCity(event, 'Test3')">Test 3</button>
+    </div>
+    <div id="Test" class="tabcontent">
+        <article class="article">
+            <h1>Title</h1>
+            <p>Test</p>
+        </article>
+        <article>
+            <span tone="gen">this has a lot of extra text blah blah blah blah blah</span>
+            <span tone="s">this has a lot of extra text blah blah blah blah blah</span>
+            <span>this has a lot of extra text blah blah blah blah blah</span>
+            <span>this has a lot of extra text blah blah blah blah blah</span>
+            <span>this has a lot of extra text blah blah blah blah blah</span>
+        </article>
+    </div>        
+    <div id="Test2" class="tabcontent">
+        <article>
+            <p>Test2</p>
+        </article>
+        <article>
+            <p>this has a lot of extra text blah blah blah blah blah</p>
+        </article>
+    </div>
 </body>
 </html>

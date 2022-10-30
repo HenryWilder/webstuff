@@ -13,11 +13,37 @@ body {
     background-size: cover;
 }
 
-.copy-panel {
+article {
     background-color: white;
     color: black;
-    box-shadow: 0px 4px 4px #00000030;
+    box-shadow: 0px 2px 1px #00000030, 0px 0px 0px #00000060;
 }
+article span {
+    color: lightgray;
+}
+article:hover span {
+    color: #333;
+}
+article span:hover {
+    color: black;
+    font-size: calc(1em + 1px);
+}
+article:hover {
+    box-shadow: 0px 3px 2px #00000010, 0px 8px 8px #00000060;
+}
+
+*[tone]:hover::after {
+    font-size: 0.7em;
+}
+*[tone="gen"]:hover::after {
+    color: darkgreen;
+    content: ' [/gen]';
+}
+*[tone="s"]:hover::after {
+    color: brown;
+    content: ' [/s]';
+}
+
 
 .title-bar {
     background-color: #254486;
@@ -49,4 +75,14 @@ body {
     border: 2pt solid var(--main-color);
     transition: 0.1s;
     box-shadow: 0px 4px 5px 2px var(--nav-bar-shadows-color);
+}
+
+.code-category-button {
+    background-color: linear-gradient(#e0c73980, #df6e1180);
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.637);
+    color: white;
+    font-size: large;
 }

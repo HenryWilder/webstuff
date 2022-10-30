@@ -10,6 +10,7 @@
     -webkit-text-stroke-color: white;
     font-size: 2em;
     width: 1em;
+    margin: 0em 0.125em;
     text-align: center;
     text-decoration: none;
     transition: 0.25s;
@@ -30,7 +31,12 @@
     color: #0077b5;
 }
 
+.fa-linkedin-square:hover {
+    color: #0077b5;
+}
+
 .icon-open-mouth:hover {
+    color: #8115ce;
     background: -webkit-radial-gradient(circle, #1d1928, #8115ce); /* #2690fc */
     -webkit-background-clip: text;
     background-clip: text;
