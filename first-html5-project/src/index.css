@@ -1,6 +1,7 @@
 @import "./styles/colors-effects.css";
 @import "./styles/typography.css";
 @import "./styles/layout.css";
+@import "./styles/bloodgoop.css";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
 .fa {
@@ -19,4 +20,19 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #0080FF00;
     text-shadow: 0px 4px 4px var(--nav-bar-shadows-color);
+}
+
+.fa-github:hover {
+    color: #171515;
+}
+
+.fa-linkedin-square:hover {
+    color: #0077b5;
+}
+
+.icon-open-mouth:hover {
+    background: -webkit-radial-gradient(circle, #1d1928, #8115ce); /* #2690fc */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
