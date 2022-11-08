@@ -3,6 +3,7 @@
 @import "./styles/layout.css";
 @import "./styles/bloodgoop.css";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import "./styles/components.css";
 
 .fa {
     color: #00000000;
