@@ -4,79 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Henry Wilder Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body class="vertical">
-    <!-- Page header -->
-    <header>
-        <h1>Henry Wilder</h1>
-    </header>
-    <!-- Page body -->
-    <div class="fill horizontal">
-        <!-- Navigation sidebar -->
-        <nav class="vertical">
-            <a>Home</a>
-            <a>Other</a>
-        </nav>
-        <!-- Option select & content -->
-        <div class="fill vertical">
-            <!-- Option select -->
-            <aside class="horizontal">
-                <a>Option 1</a>
-                <a>Option 2</a>
-            </aside>
-            <!-- Content -->
-            <section class="scrollable fill vertical">
-                <article>
-                    <h2>Article name</h2>
-                    <p>body text</p>
-                </article>
-                <article>
-                    <h2>Another article</h2>
-                    <p>body text</p>
-                    <p>body text line 2</p>
-                    <p>body text line 3</p>
-                    <p>body text line 4</p>
-                    <p>body text line 5</p>
-                    <p>body text line 6</p>
-                </article>
-                <article>
-                    <h2>A really long article</h2>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                    <p>body text</p>
-                </article>
-            </section>
+<body>
+    <div id="card-grid">
+        <div class="gallery-card">
+            <img src="./resource/metaball.gif" alt="Metaball simulation" />
+            <!-- Todo: add slidshow to switch between images -->
+            <div class="gallery-card-cover"></div>
+            <p>C++</p>
+        </div>
+        <div class="gallery-card">
+            <img src="./resource/solarsystem.gif" alt="Proceedurally generated solar system" />
+            <div class="gallery-card-cover" style="--glass-color: red;"></div>
+            <p>C#</p>
+        </div>
+        <div class="gallery-card">
+            <div class="gallery-card-cover" style="--glass-color: gold;"></div>
+            <p>JS/TS</p>
+        </div>
+        <div class="gallery-card">
+            <div class="gallery-card-cover" style="--glass-color: green;"></div>
+            <p>3D</p>
         </div>
     </div>
-    <!-- Page footer -->
-    <footer>
-        <div class="nav-bar horizontal">
-            <!-- GitHub link -->
-            <a class="fa fa-github" href="https://github.com/HenryWilder" target="_blank"></a>
-            <!-- LinkedIn link -->
-            <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/henry-wilder/" target="_blank"></a>
-            <!-- Skill grid -->
-            <a class="fa icon-open-mouth" href="about:blank" target="_blank"></a>
-        </div>
-    </footer>
 </body>
 </html>
