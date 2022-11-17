@@ -87,6 +87,39 @@ article {
     overflow-y: scroll;
 }
 
+.container-with-label {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.container, .container-label {
+    border-radius: 30px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px lightgray;
+    border: thin solid lightgray;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: fit-content;
+    padding: 10px;
+    gap: 10px;
+    margin: 1rem;
+    margin-top: 3rem;
+}
+.container-label {
+    padding: 10px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    height: 4rem;
+    width: fit-content;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    z-index: -1;
+}
+
 #card-grid {
     width: fit-content;
     display: grid;
@@ -113,21 +146,20 @@ article {
     filter: brightness(80%);
 }
 .gallery-card-cover {
-    --glass-color: dodgerblue;
-    background-color: var(--glass-color);
     box-shadow:
         inset 0 0 100px darkblue, /* Vignette */
         0 0 0px transparent; /* Drop */
-    backdrop-filter: blur(5px);
-    mix-blend-mode: multiply;
+    backdrop-filter: blur(10px);
+    opacity: 90%;
     transition: 400ms ease-in-out;
 }
 .gallery-card:hover .gallery-card-cover {
-    background-color: white;
+    background-color: rgba(0,0,0,0);
     box-shadow:
         inset 0 0 0px transparent, /* Vignette */
         0 0 10px black; /* Drop */
     backdrop-filter: blur(0px);
+    opacity: 0%;
 }
 .gallery-card > p {
     text-align: center;
@@ -142,4 +174,75 @@ article {
     font-weight: bolder;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-shadow: 0 0 15px rgba(0,0,10,0.75), 0 1px 4px rgba(0,0,10,0.75);
+}
+
+#skill-list {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 10px;
+}
+
+.skill-pill {
+    border-radius: 9999px;
+    padding: 5px 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: lightgray;
+    font-size: small;
+    box-shadow: 0 0 0 black;
+    transition: 400ms ease-in-out;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: default;
+}
+.skill-pill:hover {
+    box-shadow: 0 4px 2px rgba(0,0,0,0.5);
+    top: -4px;
+    transition: 100ms ease-in;
+}
+
+.cpp {
+    --color1: #659ad2;
+    --color2: #00599c;
+    --color3: #004482;
+    background:conic-gradient(
+        var(--color1) 0deg 59deg,
+        var(--color2) 61deg 119deg,
+        var(--color3) 121deg 239deg,
+        var(--color1) 241deg 360deg
+    );
+    color: white;
+}
+.cs {
+    --color1: #9b4993;
+    --color2: #823085;
+    --color3: #682876;
+    background:conic-gradient(
+        var(--color1) 0deg 59deg,
+        var(--color2) 61deg 119deg,
+        var(--color3) 121deg 239deg,
+        var(--color1) 241deg 360deg
+    );
+    color: white;
+}
+.ts {
+    --color1: #F0DB4F;
+    --color2: #007acc;
+    background: conic-gradient(
+        var(--color1) 0deg 44deg,
+        var(--color2) 46deg 224deg,
+        var(--color1) 226deg 360deg
+    );
+}
+.three-dee {
+    --color1: #ff00ff;
+    --color2: #ff00ff;
+    --color3: #ff00ff;
+    background: green;
 }
