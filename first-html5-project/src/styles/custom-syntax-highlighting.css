@@ -68,10 +68,11 @@ code {
 code .line {
     display: flex;
     flex-flow: row nowrap;
+    width: 100%;
 }
 code::selection, code *::selection {
     background-color: rgba(51,153,255,0.5);
-    background-color: rgb(25.5,76.5,127.5);
+    /* background-color: rgb(25.5,76.5,127.5); */
 }
 code .line-number {
     color: rgb(43,145,175);
@@ -121,6 +122,14 @@ code.cpp .property { color: rgb(200,200,200) }
 code.cpp .static-field { color: rgb(200,200,200) }
 code.cpp .static-member-function { color: rgb(220,220,170) }
 code.cpp .string .delimiter-character { color: rgb(232,201,187) }
+code.cpp .string::before {
+    content: attr(open-seq);
+    color: rgb(232,201,187)
+}
+code.cpp .string::after {
+    content: attr(close-seq);
+    color: rgb(232,201,187)
+}
 code.cpp .string .escape-character { color: rgb(255,214,143) }
 code.cpp .user-defined-literal.number { color: rgb(181,206,168) }
 code.cpp .user-defined-literal.raw { color: rgb(218,218,218) }

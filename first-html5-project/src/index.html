@@ -7,21 +7,43 @@
     <title>Henry Wilder Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <svg style="display:none">
-        <symbol id="icon-function" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.207px 13px">
-            <defs>
-                <style>
-                    .b{
-                        fill: none;
-                        stroke: #bb91dc;
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.25px;
-                    }
-                </style>
-            </defs>
-            <polygon class="b" points="10.832,9.533 10.832,3.467 5.604,.434 .375,3.467 .375,9.533 5.604,12.566 10.832,9.533"/>
-            <polyline class="b" points=".63,3.615 5.604,6.5 10.578,3.615"/>
-            <line class="b" x1="5.604" y1="12.378" x2="5.604" y2="6.5"/>
+    <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.152 13">
+        <defs>
+            <style>
+                .b {
+                    stroke-linejoin: round;
+                }
+                .b, .c {
+                    stroke: #88c7ff;
+                }
+                .b, .c, .d {
+                    stroke-width: 1.5px;
+                }
+                .b, .e {
+                    fill: #88c7ff;
+                }
+                .c, .d{
+                    fill: none;
+                    stroke-miterlimit: 10;
+                }
+                .d {
+                    stroke: #bb91dc;
+                }
+            </style>
+        </defs>
+        <symbol id="icon-function" viewBox="0 0 13 13">
+            <polygon class="d" points="10.832 9.533 10.832 3.467 5.604 .434 .375 3.467 .375 9.533 5.604 12.566 10.832 9.533"/>
+            <polyline class="d" points=".63 3.615 5.604 6.5 10.578 3.615"/>
+            <line class="d" x1="5.604" y1="12.378" x2="5.604" y2="6.5"/>
+        </symbol>
+        <symbol id="icon-variable" viewBox="15.24 0 13 13">
+            <polyline class="c" points="26.599 3.166 21.905 .443 15.092 4.395"/>
+            <polygon class="b" points="19.787 7.118 15.092 4.395 15.092 9.841 19.787 12.564 26.599 8.612 26.599 3.166 19.787 7.118"/>
+        </symbol>
+        <symbol id="icon-type" viewBox="30.5 0 13 13">
+            <rect class="e" x="29.152" y="1.875" width="13" height="3.25"/>
+            <rect class="e" x="29.152" y="7.25" width="4.325" height="4.325"/>
+            <rect class="e" x="37.827" y="7.25" width="4.325" height="4.325"/>
         </symbol>
     </svg>
 </head>
@@ -52,15 +74,14 @@
             </div>
         </section>
     </div>
-    <div>
+
+    <section>
         <h2>Example C++</h2>
         <code class="cpp">
             <div class="line">
                 <div class="line-number">1</div>
                 <div class="preprocessor keyword">#include</div>&nbsp;
-                <div class="string">
-                    <span class="delimiter-character">&lt;</span>iostream<span class="delimiter-character">&gt;</span>
-                </div>
+                <div class="string" open-seq="&lt;" close-seq="&gt;">iostream</div>
             </div>
             <div class="line">
                 <div class="line-number">2</div>
@@ -77,10 +98,10 @@
                         <div class="declaration">
                             <svg height="10px" viewbox="0 0 13 13">
                                 <use href="#icon-function"/>
-                            </svg>&nbsp;&nbsp;
+                            </svg>&nbsp;
                             <div class="user-keyword">int</div>&nbsp;
                             <div class="function">main</div>
-                            <div class="punctuation">()</div>
+                            <div class="punctuation">&lpar;&rpar;</div>
                         </div>
                         <p>
                             does stuff
@@ -115,7 +136,8 @@
                 <div class="line-number">8</div>
             </div>
         </code>
-    </div>
+    </section>
+
     <div class="container-with-label">
         <section class="container">
             <div class="container-label">Skills</div>
@@ -175,6 +197,7 @@
                 <div class="skill-pill-wrapper"><div class="skill-pill">C++</div></div>
             </div>
         </section>
+
         <section>
             <div class="labeled-squircle">
                 <div class="squircle-container">
