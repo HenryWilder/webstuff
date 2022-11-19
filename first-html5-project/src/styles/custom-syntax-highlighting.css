@@ -2,6 +2,7 @@
 .tooltip {
     position: relative;
     display: inline-block;
+    cursor: default;
 }
 
 /* Tooltip text */
@@ -23,6 +24,12 @@
     user-select: none;
     box-shadow: -1px 2px 5px rgba(0,0,0,0.25);
     transition-delay: 0s;
+}
+
+/* Highlight the tooltip container when you mouse over it */
+.tooltip:hover {
+    background-color: rgba(51,153,255,0.25);
+    border-radius: 3px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -49,7 +56,7 @@ code {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none;
-    
+
     color: rgb(220,220,220);
     background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
@@ -83,6 +90,12 @@ code .line::before {
     counter-increment: snippet 1;
     content: counter(snippet);
 }
+code .scope
+{
+    margin-left: calc(0.5ch - 1px);
+    width: 3.5ch;
+    border-left: 1px dotted rgb(200,200,200);
+}
 code .comment { color: rgb(87,166,74) }
 code .preprocessor { color: rgb(220,220,220) }
 code .preprocessor.keyword { color: rgb(155,155,155) }
@@ -99,7 +112,6 @@ code .literal { color: rgb(218,218,218) }
 code .number { color: rgb(181,206,168) }
 code .string { color: rgb(214,157,133) }
 code .excluded-code { color: rgb(155,155,155) }
-code .scope { border-left: 1px dotted rgb(220,220,220); }
 
 /* C/C++ */
 code.cpp .user-keyword, code .c .user-keyword { color: rgb(86,156,214) }
