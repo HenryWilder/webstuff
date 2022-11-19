@@ -6,6 +6,7 @@
 @import "./styles/components.css";
 /* Get chip styles for skill pills */
 @import "./styles/chips.css";
+@import "./styles/custom-syntax-highlighting.css";
 
 .fa {
     color: #00000000;

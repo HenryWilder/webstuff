@@ -3,11 +3,37 @@ code {
     color: rgb(220,220,220);
     background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
+    display: block;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    font-size: 10pt;
+    cursor: text;
+    tab-size: 8;
 }
-code *::selection { background-color: rgb(51,153,255) }
-code .line-number { color: rgb(43,145,175); background-color: rgb(30,30,30) }
+@media only screen {
+    code {
+        font-size: 13px;
+    }
+}
+code::selection, code *::selection {
+    background-color: rgba(51,153,255,0.5)
+}
+code .line-number {
+    color: rgb(43,145,175);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    cursor: default;
+}
 code .comment { color: rgb(87,166,74) }
-code .comment::selection { color: rgb(220,220,220); background-color: rgb(173,216,230) }
+code .comment::selection {
+    color: rgb(220,220,220);
+    background-color: rgb(173,216,230)
+}
+code .preprocessor { color: rgb(220,220,220) }
+code .preprocessor.keyword { color: rgb(155,155,155) }
 code .identifier { color: rgb(220,220,220) }
 code .keyword { color: rgb(86,156,214) }
 code .keyword-control { color: rgb(216,160,223) }
@@ -19,37 +45,40 @@ code .type { color: rgb(78,201,176) }
 code .literal { color: rgb(218,218,218) }
 code .number { color: rgb(181,206,168) }
 code .string { color: rgb(214,157,133) }
+code .scope {
+    border-left: 1px dotted rgb(220,220,220);
+}
 
 /* C/C++ */
-code .cpp .user-keyword, code .c .user-keyword { color: rgb(86,156,214) }
-code .cpp .class-template { color: rgb(78,201,176) }
-code .cpp .enumerator { color: rgb(184,215,163) }
-code .cpp .field { color: rgb(218,218,218) }
-code .cpp .function-template { color: rgb(220,220,170) }
-code .cpp .function { color: rgb(220,220,170) }
-code .cpp .keyword-control { color: rgb(216,160,223) }
-code .cpp .label { color: rgb(200,200,200) }
-code .cpp .local-variable { color: rgb(156,220,254) }
-code .cpp .macro { color: rgb(190,183,255) }
-code .cpp .member-function { color: rgb(220,220,170) }
-code .cpp .member-operator-function { color: rgb(180,180,180) }
-code .cpp .namespace { color: rgb(200,200,200) }
-code .cpp .new-delete-operator-function { color: rgb(86,156,214) }
-code .cpp .operator-function { color: rgb(180,180,180) }
-code .cpp .parameter { color: rgb(154,154,154) }
-code .cpp .property { color: rgb(200,200,200) }
-code .cpp .static-field { color: rgb(200,200,200) }
-code .cpp .static-member-function { color: rgb(220,220,170) }
-code .cpp .string-delimiter-character { color: rgb(232,201,187) }
-code .cpp .string-escape-character { color: rgb(255,214,143) }
-code .cpp .user-defined-literal.number { color: rgb(181,206,168) }
-code .cpp .user-defined-literal.raw { color: rgb(218,218,218) }
-code .cpp .user-defined-literal.string { color: rgb(214,157,133) }
-code .cpp .user-type { color: rgb(78,201,176) }
-code .cpp .user-type.generic { color: rgb(78,201,176) }
-code .cpp .user-type.reference { color: rgb(78,201,176) }
-code .cpp .user-type.value { color: rgb(78,201,176) }
-code .cpp .variable { color: rgb(200,200,200) }
+code.cpp .user-keyword, code .c .user-keyword { color: rgb(86,156,214) }
+code.cpp .class-template { color: rgb(78,201,176) }
+code.cpp .enumerator { color: rgb(184,215,163) }
+code.cpp .field { color: rgb(218,218,218) }
+code.cpp .function-template { color: rgb(220,220,170) }
+code.cpp .function { color: rgb(220,220,170) }
+code.cpp .keyword-control { color: rgb(216,160,223) }
+code.cpp .label { color: rgb(200,200,200) }
+code.cpp .local-variable { color: rgb(156,220,254) }
+code.cpp .macro { color: rgb(190,183,255) }
+code.cpp .member-function { color: rgb(220,220,170) }
+code.cpp .member-operator-function { color: rgb(180,180,180) }
+code.cpp .namespace { color: rgb(200,200,200) }
+code.cpp .new-delete-operator-function { color: rgb(86,156,214) }
+code.cpp .operator-function { color: rgb(180,180,180) }
+code.cpp .parameter { color: rgb(154,154,154) }
+code.cpp .property { color: rgb(200,200,200) }
+code.cpp .static-field { color: rgb(200,200,200) }
+code.cpp .static-member-function { color: rgb(220,220,170) }
+code.cpp .string .delimiter-character { color: rgb(232,201,187) }
+code.cpp .string .escape-character { color: rgb(255,214,143) }
+code.cpp .user-defined-literal.number { color: rgb(181,206,168) }
+code.cpp .user-defined-literal.raw { color: rgb(218,218,218) }
+code.cpp .user-defined-literal.string { color: rgb(214,157,133) }
+code.cpp .user-type { color: rgb(78,201,176) }
+code.cpp .user-type.generic { color: rgb(78,201,176) }
+code.cpp .user-type.reference { color: rgb(78,201,176) }
+code.cpp .user-type.value { color: rgb(78,201,176) }
+code.cpp .variable { color: rgb(200,200,200) }
 
 /* CSS */
 code .css .comment { color: rgb(87,166,74) }
@@ -67,7 +96,6 @@ code .glsl .userkeyword2 { color: rgb(255,95,175) }
 code .glsl .variable { color: rgb(95,255,255) }
 
 /* HTML */
-code .html { background-color: rgb(30,30,30) }
 code .html .attribute-name { color: rgb(156,220,254) }
 code .html .attribute-value { color: rgb(200,200,200) }
 code .html .client-template-separator { color: rgb(220,220,220); font-weight: bold }
@@ -94,5 +122,5 @@ code .regex .comment { color: rgb(87,166,74) }
 code .regex .grouping { color: rgb(5,195,186) }
 code .regex .other-escape { color: rgb(255,214,143) }
 code .regex .quantifier { color: rgb(249,121,174) }
-code .regex .self-escaped-character { color: rgb(214,157,133) }
+code .regex .self-escaped-character { color: rgb(214,157,133); font-weight: bold }
 code .regex .text { color: rgb(214,157,133) }
