@@ -46,6 +46,10 @@
 
 /* Universal/default */
 code {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    
     color: rgb(220,220,220);
     background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
@@ -59,6 +63,7 @@ code {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    counter-reset: snippet;
 }
 @media only screen {
     code {
@@ -70,18 +75,13 @@ code .line {
     flex-flow: row nowrap;
     width: 100%;
 }
-code::selection, code *::selection {
-    background-color: rgba(51,153,255,0.5);
-    /* background-color: rgb(25.5,76.5,127.5); */
-}
-code .line-number {
+code .line::before {
     color: rgb(43,145,175);
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none;
     padding-left: 1rem;
     padding-right: 2rem;
     cursor: default;
+    counter-increment: snippet 1;
+    content: counter(snippet);
 }
 code .comment { color: rgb(87,166,74) }
 code .preprocessor { color: rgb(220,220,220) }
