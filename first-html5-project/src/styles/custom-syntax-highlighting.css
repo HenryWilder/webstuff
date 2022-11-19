@@ -1,3 +1,49 @@
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(66,66,69);
+    color: #fff;
+    padding: 1ch 2ch;
+    border-radius: 3px;
+    border: 1px solid rgb(77,77,80);
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    z-index: 1;
+    cursor: default;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    box-shadow: -1px 2px 5px rgba(0,0,0,0.25);
+    transition-delay: 0s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.tooltiptext .declaration {
+    text-shadow: 0 0 5px rgba(30,30,30, 0.5);
+    line-height: 1.5rem;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.tooltiptext p {
+    font-family: sans-serif;
+    color: rgb(220,220,220);
+}
+
 /* Universal/default */
 code {
     color: rgb(220,220,220);
@@ -5,18 +51,27 @@ code {
     font-family: 'Consolas', monospace;
     display: block;
     border-radius: 0.5rem;
+    border: 2px solid rgb(62,62,62);
     margin: 0.5rem;
     font-size: 10pt;
     cursor: text;
     tab-size: 8;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
 }
 @media only screen {
     code {
         font-size: 13px;
     }
 }
+code .line {
+    display: flex;
+    flex-flow: row nowrap;
+}
 code::selection, code *::selection {
-    background-color: rgba(51,153,255,0.5)
+    background-color: rgba(51,153,255,0.5);
+    background-color: rgb(25.5,76.5,127.5);
 }
 code .line-number {
     color: rgb(43,145,175);
@@ -28,10 +83,6 @@ code .line-number {
     cursor: default;
 }
 code .comment { color: rgb(87,166,74) }
-code .comment::selection {
-    color: rgb(220,220,220);
-    background-color: rgb(173,216,230)
-}
 code .preprocessor { color: rgb(220,220,220) }
 code .preprocessor.keyword { color: rgb(155,155,155) }
 code .identifier { color: rgb(220,220,220) }
@@ -42,12 +93,12 @@ code .operator-overloaded { color: rgb(220,220,170) }
 code .punctuation { color: rgb(220,220,220) }
 code .smart-tag { border: 1px dotted rgb(215,186,125); margin: -1px }
 code .type { color: rgb(78,201,176) }
+code .enum { color: rgb(184,215,163) }
 code .literal { color: rgb(218,218,218) }
 code .number { color: rgb(181,206,168) }
 code .string { color: rgb(214,157,133) }
-code .scope {
-    border-left: 1px dotted rgb(220,220,220);
-}
+code .excluded-code { color: rgb(155,155,155) }
+code .scope { border-left: 1px dotted rgb(220,220,220); }
 
 /* C/C++ */
 code.cpp .user-keyword, code .c .user-keyword { color: rgb(86,156,214) }

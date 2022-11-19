@@ -7,6 +7,23 @@
     <title>Henry Wilder Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <svg style="display:none">
+        <symbol id="icon-function" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.207px 13px">
+            <defs>
+                <style>
+                    .b{
+                        fill: none;
+                        stroke: #bb91dc;
+                        stroke-miterlimit: 10;
+                        stroke-width: 1.25px;
+                    }
+                </style>
+            </defs>
+            <polygon class="b" points="10.832,9.533 10.832,3.467 5.604,.434 .375,3.467 .375,9.533 5.604,12.566 10.832,9.533"/>
+            <polyline class="b" points=".63,3.615 5.604,6.5 10.578,3.615"/>
+            <line class="b" x1="5.604" y1="12.378" x2="5.604" y2="6.5"/>
+        </symbol>
+    </svg>
 </head>
 <body>
     <div class="container-with-label">
@@ -38,13 +55,65 @@
     <div>
         <h2>Example C++</h2>
         <code class="cpp">
-            <span class="line-number">1</span><span class="preprocessor keyword">#include</span> <span class="user-defined-literal string"><span class="delimiter-character">&lt;</span>iostream<span class="delimiter-character">&gt;</span></span><br>
-            <span class="line-number">2</span><br>
-            <span class="line-number">4</span><span class="user-keyword">int</span> <span class="function">main</span><span class="punctuation">()</span><br>
-            <span class="line-number">5</span><span class="punctuation">{</span><br>
-            <span class="line-number">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="namespace">std</span><span class="punctuation">::</span><span class="variable">cout</span> <span class="operator">&lt;&lt;</span> <span class="user-defined-literal string"><span class="delimiter-character">"</span>Hello, world!<span class="delimiter-character">"</span></span><span class="punctuation">;</span><br>
-            <span class="line-number">7</span><span class="punctuation">}</span><br>
-            <span class="line-number">8</span>
+            <div class="line">
+                <div class="line-number">1</div>
+                <div class="preprocessor keyword">#include</div>&nbsp;
+                <div class="string">
+                    <span class="delimiter-character">&lt;</span>iostream<span class="delimiter-character">&gt;</span>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-number">2</div>
+            </div>
+            <div class="line">
+                <div class="line-number">3</div>
+                <div class="comment">// Hi! I'm a comment! :)</div>
+            </div>
+            <div class="line">
+                <div class="line-number">4</div>
+                <div class="user-keyword">int</div>&nbsp;
+                <div class="function tooltip">main
+                    <span class="tooltiptext">
+                        <div class="declaration">
+                            <svg height="10px" viewbox="0 0 13 13">
+                                <use href="#icon-function"/>
+                            </svg>&nbsp;&nbsp;
+                            <div class="user-keyword">int</div>&nbsp;
+                            <div class="function">main</div>
+                            <div class="punctuation">()</div>
+                        </div>
+                        <p>
+                            does stuff
+                        </p>
+                    </span>
+                </div>
+                <div class="punctuation">()</div>
+            </div>
+            <div class="line">
+                <div class="line-number">5</div>
+                <div class="punctuation">{</div>
+            </div>
+            <div class="line">
+                <div class="line-number">6</div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="namespace">std</div>
+                <div class="punctuation">::</div>
+                <div class="variable">cout</div>
+                &nbsp;
+                <div class="operator">&lt;&lt;</div>
+                &nbsp;
+                <div class="string">
+                    <span class="delimiter-character">"</span>Hello, world!<span class="delimiter-character">"</span>
+                </div>
+                <div class="punctuation">;</div>
+            </div>
+            <div class="line">
+                <div class="line-number">7</div>
+                <div class="punctuation">}</div>
+            </div>
+            <div class="line">
+                <div class="line-number">8</div>
+            </div>
         </code>
     </div>
     <div class="container-with-label">
