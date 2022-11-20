@@ -189,17 +189,17 @@ code {
         --color-plain-text: rgb(0,0,0);
 
         --color-comment: rgb(0,128,0);
-        --color-preprocessor: rgb();
-        --color-preprocessor-keyword: rgb();
-        --color-identifier: rgb();
-        --color-keyword: rgb();
-        --color-keyword-control: rgb();
-        --color-operator: rgb();
-        --color-operator-overloaded: rgb();
-        --color-punctuation: rgb();
+        --color-preprocessor: rgb(0,0,0);
+        --color-preprocessor-keyword: rgb(128,128,128);
+        --color-identifier: rgb(0,0,0);
+        --color-keyword: rgb(0,0,255);
+        --color-keyword-control: rgb(143,8,196);
+        --color-operator: rgb(0,0,0);
+        --color-operator-overloaded: rgb(116,83,31);
+        --color-punctuation: rgb(0,0,0);
         --color-type: rgb();
         --color-enum: rgb();
-        --color-literal: rgb();
+        --color-literal: rgb(0,0,0);
         --color-number: rgb();
         --color-string: rgb();
         --color-excluded-code: rgb();
@@ -251,34 +251,34 @@ code {
         --color-glsl-variable: rgb(95,255,255);
 
         /* HTML */
-        --color-html-attribute-name: rgb();
-        --color-html-attribute-value: rgb();
-        --color-html-client-template-separator: rgb();
-        --color-html-client-template-tag: rgb();
-        --color-html-client-template-value: rgb();
-        --color-html-comment: rgb();
-        --color-html-element-name: rgb();
-        --color-html-entity: rgb();
-        --color-html-operator: rgb();
-        --color-html-razor-code-background: rgb();
-        --color-html-razor-tag-helper-attribute: rgb();
-        --color-html-razor-tag-helper-element: rgb();
-        --color-html-server-side-script: rgb();
-        --color-html-tag-delimiter: rgb();
+        --color-html-attribute-name: rgb(255,0,0);
+        --color-html-attribute-value: rgb(0,0,255);
+        --color-html-client-template-separator: rgb(0,0,0);
+        --color-html-client-template-tag: rgb(0,100,0);
+        --color-html-client-template-value: rgb(128,0,128);
+        --color-html-comment: rgb(0,100,0);
+        --color-html-element-name: rgb(128,0,0);
+        --color-html-entity: rgb(255,0,0);
+        --color-html-operator: rgb(0,0,255);
+        --color-html-razor-code-background: rgb(0,0,0);
+        --color-html-razor-tag-helper-attribute: rgb(128,0,128);
+        --color-html-razor-tag-helper-element: rgb(128,0,128);
+        --color-html-server-side-script: rgb(0,0,0);
+        --color-html-tag-delimiter: rgb(0,0,255);
 
         /* JSON */
-        --color-json-property-name: rgb();
+        --color-json-property-name: rgb(46,117,182);
 
         /* Regex */
-        --color-regex-alternation: rgb();
-        --color-regex-anchor: rgb();
-        --color-regex-character-class: rgb();
-        --color-regex-comment: rgb();
-        --color-regex-grouping: rgb();
-        --color-regex-other-escape: rgb();
-        --color-regex-quantifier: rgb();
-        --color-regex-self-escaped-character: rgb();
-        --color-regex-text: rgb();
+        --color-regex-alternation: rgb(5,195,186);
+        --color-regex-anchor: rgb(255,0,193);
+        --color-regex-character-class: rgb(0,115,255);
+        --color-regex-comment: rgb(0,128,0);
+        --color-regex-grouping: rgb(5,195,186);
+        --color-regex-other-escape: rgb(158,91,113);
+        --color-regex-quantifier: rgb(255,0,193);
+        --color-regex-self-escaped-character: rgb(128,0,0);
+        --color-regex-text: rgb(128,0,0);
     }
 }
 code .line {
