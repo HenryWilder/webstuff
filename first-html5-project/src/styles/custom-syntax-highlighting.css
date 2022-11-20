@@ -8,7 +8,6 @@
 /* Tooltip text */
 .has-tooltip .tooltip {
     visibility: hidden;
-    opacity: 0%;
     width: max-content;
     background-color: rgb(66,66,69);
     color: #fff;
@@ -36,7 +35,6 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .has-tooltip:hover .tooltip {
     visibility: visible;
-    opacity: 100%;
     transition-delay: 0.25s;
 }
 
@@ -53,6 +51,12 @@
     color: rgb(220,220,220);
 }
 
+@media only print {
+    .has-tooltip {
+        border-bottom: 1px dotted lightgray;
+    }
+}
+
 /* Universal/default */
 code {
     -webkit-user-select: none; /* Safari */
@@ -60,7 +64,6 @@ code {
     user-select: none;
 
     color: var(--color-plain-text);
-    background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
     display: block;
     max-width: 100%;
@@ -77,13 +80,16 @@ code {
     counter-reset: snippet;
     padding: 0.5ch 2rem 0.5ch 0;
     box-shadow: inset 0 0 5px black;
+    position: relative;
 }
 @media only screen {
     code {
         font-size: 13px;
+        background-color: rgb(30,30,30);
 
         /* Screen colors */
         --color-plain-text: rgb(220,220,220);
+        --color-line-number: rgb(43,145,175);
 
         --color-comment: rgb(87,166,74);
         --color-preprocessor: rgb(220,220,220);
@@ -181,12 +187,14 @@ code {
 @media only print {
     code {
         font-size: 10pt;
-        width: 100%;
+        width: 100vw;
         box-shadow: none;
         background-color: transparent;
+        border: 1pt solid lightgray;
 
         /* Print colors */
         --color-plain-text: rgb(0,0,0);
+        --color-line-number: rgb(43,145,175);
 
         --color-comment: rgb(0,128,0);
         --color-preprocessor: rgb(0,0,0);
@@ -282,13 +290,17 @@ code {
         --color-regex-text: rgb(128,0,0);
     }
 }
+code label {
+    margin-left: calc(1rem);
+    color: var(--color-line-number);
+}
 code .line {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
 }
 code .line::before {
-    color: rgb(43,145,175);
+    color: var(--color-line-number);
     padding-left: 1rem;
     padding-right: 2rem;
     cursor: default;
