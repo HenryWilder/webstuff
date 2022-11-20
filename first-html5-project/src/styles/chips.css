@@ -1,16 +1,99 @@
-.skill-pill.cpp {
-    background-color: #00599c;
-    color: #fff;
+@media only screen {
+    .skill-pill.cpp {
+        background-color: #00599c;
+        color: #fff;
+    }
+    .skill-pill.cs {
+        background-color: #823085;
+        color: #fff;
+    }
+    .skill-pill.js {
+        background-color: #F0DB4F;
+        color: #323330;
+    }
+    .skill-pill.ts {
+        background-color: #007acc;
+        color: #fff;
+    }
+    .skill-pill.html {
+        background-color: #e34c26;
+        color: #fff;
+    }
+    .skill-pill.css {
+        background-color: #2965f1;
+        color: #fff;
+    }
+    .skill-pill.ue4 {
+        background-color: #185999;
+        color: #fff;
+    }
+    .skill-pill.glsl {
+        background-color: #5884a4;
+        color: #fff;
+    }
+    .skill-pill.adobe-ps {
+        background-color: #041c34;
+        color: #31a8ff;
+    }
+    .skill-pill.adobe-ai {
+        background-color: #2c110e;
+        color: #f6991b;
+    }
+    .skill-pill.adobe-id {
+        background-color: #411021;
+        color: #e64869;
+    }
+    .skill-pill.adobe-ae {
+        background-color: #00005b;
+        color: #9999ff;
+    }
+    .skill-pill.adobe-ps, .skill-pill.adobe-ai, .skill-pill.adobe-id, .skill-pill.adobe-ae {
+        font-family: "Myriad Pro", Myriad, sans-serif;
+        width: 1.75rem;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        border-radius: 25%;
+    }
+
+    .skill-pill.subst-pa {
+        background-color: #e1262f;
+        color: #fff;
+    }
+    .skill-pill.subst-de {
+        background-color: #ef4b25;
+        color: #fff;
+    }
+    .skill-pill.subst-pa, .skill-pill.subst-de {
+        width: 3.5ch;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+
+    .skill-pill.ui, .skill-pill.ux {
+        background-image: linear-gradient(to top right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-attachment: fixed;
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+        animation: gradient 15s ease infinite;
+        color: white;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 0%;
+        }
+        50% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background-position: 0 0%;
+        }
+    }
 }
-.skill-pill.cs {
-    background-color: #823085;
-    color: #fff;
-}
-.skill-pill.js {
-    background-color: #F0DB4F;
-    color: #323330;
-}
-.skill-pill.ts {
-    background-color: #007acc;
-    color: #fff;
+@media only print {
+    .skill-pill {
+        background-color: white;
+        border: 1px solid lightgray;
+    }
 }

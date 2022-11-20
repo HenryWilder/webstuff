@@ -51,12 +51,6 @@
     color: rgb(220,220,220);
 }
 
-@media only print {
-    .has-tooltip {
-        border-bottom: 1px dotted lightgray;
-    }
-}
-
 /* Universal/default */
 code {
     -webkit-user-select: none; /* Safari */
@@ -186,11 +180,13 @@ code {
 }
 @media only print {
     code {
+        margin: 0.5rem 0;
         font-size: 10pt;
         width: 100vw;
         box-shadow: none;
         background-color: transparent;
         border: 1pt solid lightgray;
+        border-radius: 3pt;
 
         /* Print colors */
         --color-plain-text: rgb(0,0,0);
