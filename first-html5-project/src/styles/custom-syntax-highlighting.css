@@ -1,13 +1,14 @@
 /* Tooltip container */
-.tooltip {
+.has-tooltip {
     position: relative;
     display: inline-block;
     cursor: default;
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.has-tooltip .tooltip {
     visibility: hidden;
+    opacity: 0%;
     width: max-content;
     background-color: rgb(66,66,69);
     color: #fff;
@@ -27,18 +28,19 @@
 }
 
 /* Highlight the tooltip container when you mouse over it */
-.tooltip:hover {
+.has-tooltip:hover {
     background-color: rgba(51,153,255,0.25);
     border-radius: 3px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.has-tooltip:hover .tooltip {
     visibility: visible;
-    transition-delay: 0.5s;
+    opacity: 100%;
+    transition-delay: 0.25s;
 }
 
-.tooltiptext .declaration {
+.tooltip .declaration {
     text-shadow: 0 0 5px rgba(30,30,30, 0.5);
     line-height: 1.5rem;
     
@@ -46,7 +48,7 @@
     flex-flow: row nowrap;
     align-items: center;
 }
-.tooltiptext p {
+.tooltip p {
     font-family: sans-serif;
     color: rgb(220,220,220);
 }
@@ -61,20 +63,218 @@ code {
     background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
     display: block;
-    border-radius: 0.5rem;
-    border: 2px solid rgb(62,62,62);
+    max-width: 100%;
+    width: 750px;
+    min-width: fit-content;
+    border-radius: 3px;
+    /* border: 2px solid rgb(62,62,62); */
     margin: 0.5rem;
-    font-size: 10pt;
-    cursor: text;
+    cursor: default;
     tab-size: 8;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     counter-reset: snippet;
+    padding: 0.5ch 2rem 0.5ch 0;
+    box-shadow: inset 0 0 5px black;
 }
 @media only screen {
     code {
         font-size: 13px;
+
+        /* Screen colors */
+        --color-comment: rgb(87,166,74);
+        --color-preprocessor: rgb(220,220,220);
+        --color-preprocessor-keyword: rgb(155,155,155);
+        --color-identifier: rgb(220,220,220);
+        --color-keyword: rgb(86,156,214);
+        --color-keyword-control: rgb(216,160,223);
+        --color-operator: rgb(180,180,180);
+        --color-operator-overloaded: rgb(220,220,170);
+        --color-punctuation: rgb(220,220,220);
+        --color-type: rgb(78,201,176);
+        --color-enum: rgb(184,215,163);
+        --color-literal: rgb(218,218,218);
+        --color-number: rgb(181,206,168);
+        --color-string: rgb(214,157,133);
+        --color-excluded-code: rgb(155,155,155);
+
+        /* C/C++ */
+        --color-c-cpp-user-keyword: rgb(86,156,214);
+        --color-cpp-class-template: rgb(78,201,176);
+        --color-cpp-enumerator: rgb(184,215,163);
+        --color-cpp-field: rgb(218,218,218);
+        --color-cpp-function-template: rgb(220,220,170);
+        --color-cpp-function: rgb(220,220,170);
+        --color-cpp-keyword-control: rgb(216,160,223);
+        --color-cpp-label: rgb(200,200,200);
+        --color-cpp-local-variable: rgb(156,220,254);
+        --color-cpp-macro: rgb(190,183,255);
+        --color-cpp-member-function: rgb(220,220,170);
+        --color-cpp-member-operator-function: rgb(180,180,180);
+        --color-cpp-namespace: rgb(200,200,200);
+        --color-cpp-new-delete-operator-function: rgb(86,156,214);
+        --color-cpp-operator-function: rgb(180,180,180);
+        --color-cpp-parameter: rgb(154,154,154);
+        --color-cpp-property: rgb(200,200,200);
+        --color-cpp-static-field: rgb(200,200,200);
+        --color-cpp-static-member-function: rgb(220,220,170);
+        --color-cpp-string-delimiter-character: rgb(232,201,187);
+        --color-cpp-string-escape-character: rgb(255,214,143);
+        --color-cpp-user-defined-literal-number: rgb(181,206,168);
+        --color-cpp-user-defined-literal-raw: rgb(218,218,218);
+        --color-cpp-user-defined-literal-string: rgb(214,157,133);
+        --color-cpp-user-type: rgb(78,201,176);
+        --color-cpp-user-type-generic: rgb(78,201,176);
+        --color-cpp-user-type-reference: rgb(78,201,176);
+        --color-cpp-user-type-value: rgb(78,201,176);
+        --color-cpp-variable: rgb(200,200,200);
+
+        /* CSS */
+        --color-css-comment: rgb(87,166,74);
+        --color-css-keyword: rgb(86,156,214);
+        --color-css-property-name: rgb(156,220,254);
+        --color-css-property-value: rgb(200,200,200);
+        --color-css-selector: rgb(215,186,125);
+        --color-css-string: rgb(214,157,133);
+
+        /* GLSL */
+        --color-glsl-function: rgb(255,175,95);
+        --color-glsl-keyword: rgb(95,175,255);
+        --color-glsl-userkeyword1: rgb(175,95,255);
+        --color-glsl-userkeyword2: rgb(255,95,175);
+        --color-glsl-variable: rgb(95,255,255);
+
+        /* HTML */
+        --color-html-attribute-name: rgb(156,220,254);
+        --color-html-attribute-value: rgb(200,200,200);
+        --color-html-client-template-separator: rgb(220,220,220);
+        --color-html-client-template-tag: rgb(0,100,0);
+        --color-html-client-template-value: rgb(255,0,255);
+        --color-html-comment: rgb(87,166,74);
+        --color-html-element-name: rgb(86,156,214);
+        --color-html-entity: rgb(0,160,160);
+        --color-html-operator: rgb(180,180,180);
+        --color-html-razor-code-background: rgb(220,220,220);
+        --color-html-razor-tag-helper-attribute: rgb(0,128,128);
+        --color-html-razor-tag-helper-element: rgb(0,128,128);
+        --color-html-server-side-script: rgb(0,0,0);
+        --color-html-tag-delimiter: rgb(128,128,128);
+
+        /* JSON */
+        --color-json-property-name: rgb(215,185,125);
+
+        /* Regex */
+        --color-regex-alternation: rgb(5,195,186);
+        --color-regex-anchor: rgb(249,121,174);
+        --color-regex-character-class: rgb(46,171,254);
+        --color-regex-comment: rgb(87,166,74);
+        --color-regex-grouping: rgb(5,195,186);
+        --color-regex-other-escape: rgb(255,214,143);
+        --color-regex-quantifier: rgb(249,121,174);
+        --color-regex-self-escaped-character: rgb(214,157,133);
+        --color-regex-text: rgb(214,157,133);
+    }
+}
+@media only print {
+    code {
+        font-size: 10pt;
+        width: 100%;
+        box-shadow: none;
+        background-color: transparent;
+
+        /* Print colors */
+        --color-comment: rgb();
+        --color-preprocessor: rgb();
+        --color-preprocessor-keyword: rgb();
+        --color-identifier: rgb();
+        --color-keyword: rgb();
+        --color-keyword-control: rgb();
+        --color-operator: rgb();
+        --color-operator-overloaded: rgb();
+        --color-punctuation: rgb();
+        --color-type: rgb();
+        --color-enum: rgb();
+        --color-literal: rgb();
+        --color-number: rgb();
+        --color-string: rgb();
+        --color-excluded-code: rgb();
+
+        /* C/C++ */
+        --color-c-cpp-user-keyword: rgb();
+        --color-cpp-class-template: rgb();
+        --color-cpp-enumerator: rgb();
+        --color-cpp-field: rgb();
+        --color-cpp-function-template: rgb();
+        --color-cpp-function: rgb();
+        --color-cpp-keyword-control: rgb();
+        --color-cpp-label: rgb();
+        --color-cpp-local-variable: rgb();
+        --color-cpp-macro: rgb();
+        --color-cpp-member-function: rgb();
+        --color-cpp-member-operator-function: rgb();
+        --color-cpp-namespace: rgb();
+        --color-cpp-new-delete-operator-function: rgb();
+        --color-cpp-operator-function: rgb();
+        --color-cpp-parameter: rgb();
+        --color-cpp-property: rgb();
+        --color-cpp-static-field: rgb();
+        --color-cpp-static-member-function: rgb();
+        --color-cpp-string-delimiter-character: rgb();
+        --color-cpp-string-escape-character: rgb();
+        --color-cpp-user-defined-literal-number: rgb();
+        --color-cpp-user-defined-literal-raw: rgb();
+        --color-cpp-user-defined-literal-string: rgb();
+        --color-cpp-user-type: rgb();
+        --color-cpp-user-type-generic: rgb();
+        --color-cpp-user-type-reference: rgb();
+        --color-cpp-user-type-value: rgb();
+        --color-cpp-variable: rgb();
+
+        /* CSS */
+        --color-css-comment: rgb();
+        --color-css-keyword: rgb();
+        --color-css-property-name: rgb();
+        --color-css-property-value: rgb();
+        --color-css-selector: rgb();
+        --color-css-string: rgb();
+
+        /* GLSL */
+        --color-glsl-function: rgb();
+        --color-glsl-keyword: rgb();
+        --color-glsl-userkeyword1: rgb();
+        --color-glsl-userkeyword2: rgb();
+        --color-glsl-variable: rgb();
+
+        /* HTML */
+        --color-html-attribute-name: rgb();
+        --color-html-attribute-value: rgb();
+        --color-html-client-template-separator: rgb();
+        --color-html-client-template-tag: rgb();
+        --color-html-client-template-value: rgb();
+        --color-html-comment: rgb();
+        --color-html-element-name: rgb();
+        --color-html-entity: rgb();
+        --color-html-operator: rgb();
+        --color-html-razor-code-background: rgb();
+        --color-html-razor-tag-helper-attribute: rgb();
+        --color-html-razor-tag-helper-element: rgb();
+        --color-html-server-side-script: rgb();
+        --color-html-tag-delimiter: rgb();
+
+        /* JSON */
+        --color-json-property-name: rgb();
+
+        /* Regex */
+        --color-regex-alternation: rgb();
+        --color-regex-anchor: rgb();
+        --color-regex-character-class: rgb();
+        --color-regex-comment: rgb();
+        --color-regex-grouping: rgb();
+        --color-regex-other-escape: rgb();
+        --color-regex-quantifier: rgb();
+        --color-regex-self-escaped-character: rgb();
+        --color-regex-text: rgb();
     }
 }
 code .line {
@@ -96,103 +296,104 @@ code .scope
     width: 3.5ch;
     border-left: 1px dotted rgb(200,200,200);
 }
-code .comment { color: rgb(87,166,74) }
-code .preprocessor { color: rgb(220,220,220) }
-code .preprocessor.keyword { color: rgb(155,155,155) }
-code .identifier { color: rgb(220,220,220) }
-code .keyword { color: rgb(86,156,214) }
-code .keyword-control { color: rgb(216,160,223) }
-code .operator { color: rgb(180,180,180) }
-code .operator-overloaded { color: rgb(220,220,170) }
-code .punctuation { color: rgb(220,220,220) }
+
+code .comment { color: var(--color-comment) }
+code .preprocessor { color: var(--color-preprocessor) }
+code .preprocessor.keyword { color: var(--color-preprocessor-keyword) }
+code .identifier { color: var(--color-identifier) }
+code .keyword { color: var(--color-keyword) }
+code .keyword-control { color: var(--color-keyword-control) }
+code .operator { color: var(--color-operator) }
+code .operator-overloaded { color: var(--color-operator-overloaded) }
+code .punctuation { color: var(--color-punctuation) }
 code .smart-tag { border: 1px dotted rgb(215,186,125); margin: -1px }
-code .type { color: rgb(78,201,176) }
-code .enum { color: rgb(184,215,163) }
-code .literal { color: rgb(218,218,218) }
-code .number { color: rgb(181,206,168) }
-code .string { color: rgb(214,157,133) }
-code .excluded-code { color: rgb(155,155,155) }
+code .type { color: var(--color-type) }
+code .enum { color: var(--color-enum) }
+code .literal { color: var(--color-literal) }
+code .number { color: var(--color-number) }
+code .string { color: var(--color-string) }
+code .excluded-code { color: var(--color-excluded-code) }
 
 /* C/C++ */
-code.cpp .user-keyword, code .c .user-keyword { color: rgb(86,156,214) }
-code.cpp .class-template { color: rgb(78,201,176) }
-code.cpp .enumerator { color: rgb(184,215,163) }
-code.cpp .field { color: rgb(218,218,218) }
-code.cpp .function-template { color: rgb(220,220,170) }
-code.cpp .function { color: rgb(220,220,170) }
-code.cpp .keyword-control { color: rgb(216,160,223) }
-code.cpp .label { color: rgb(200,200,200) }
-code.cpp .local-variable { color: rgb(156,220,254) }
-code.cpp .macro { color: rgb(190,183,255) }
-code.cpp .member-function { color: rgb(220,220,170) }
-code.cpp .member-operator-function { color: rgb(180,180,180) }
-code.cpp .namespace { color: rgb(200,200,200) }
-code.cpp .new-delete-operator-function { color: rgb(86,156,214) }
-code.cpp .operator-function { color: rgb(180,180,180) }
-code.cpp .parameter { color: rgb(154,154,154) }
-code.cpp .property { color: rgb(200,200,200) }
-code.cpp .static-field { color: rgb(200,200,200) }
-code.cpp .static-member-function { color: rgb(220,220,170) }
-code.cpp .string .delimiter-character { color: rgb(232,201,187) }
+code.cpp .user-keyword, code .c .user-keyword { color: var(--color-c-cpp-user-keyword) }
+code.cpp .class-template{ color: var(--color-cpp-class-template) }
+code.cpp .enumerator{ color: var(--color-cpp-enumerator) }
+code.cpp .field{ color: var(--color-cpp-field) }
+code.cpp .function-template{ color: var(--color-cpp-function-template) }
+code.cpp .function{ color: var(--color-cpp-function) }
+code.cpp .keyword-control{ color: var(--color-cpp-keyword-control) }
+code.cpp .label{ color: var(--color-cpp-label) }
+code.cpp .local-variable{ color: var(--color-cpp-local-variable) }
+code.cpp .macro{ color: var(--color-cpp-macro) }
+code.cpp .member-function{ color: var(--color-cpp-member-function) }
+code.cpp .member-operator-function{ color: var(--color-cpp-member-operator-function) }
+code.cpp .namespace{ color: var(--color-cpp-namespace) }
+code.cpp .new-delete-operator-function{ color: var(--color-cpp-new-delete-operator-function) }
+code.cpp .operator-function{ color: var(--color-cpp-operator-function) }
+code.cpp .parameter{ color: var(--color-cpp-parameter) }
+code.cpp .property{ color: var(--color-cpp-property) }
+code.cpp .static-field{ color: var(--color-cpp-static-field) }
+code.cpp .static-member-function{ color: var(--color-cpp-static-member-function) }
+code.cpp .string .delimiter-character { color: var(--color-cpp-string-delimiter-character) }
 code.cpp .string::before {
     content: attr(open-seq);
-    color: rgb(232,201,187)
+    color: var(--color-cpp-string-delimiter-character)
 }
 code.cpp .string::after {
     content: attr(close-seq);
-    color: rgb(232,201,187)
+    color: var(--color-cpp-string-delimiter-character)
 }
-code.cpp .string .escape-character { color: rgb(255,214,143) }
-code.cpp .user-defined-literal.number { color: rgb(181,206,168) }
-code.cpp .user-defined-literal.raw { color: rgb(218,218,218) }
-code.cpp .user-defined-literal.string { color: rgb(214,157,133) }
-code.cpp .user-type { color: rgb(78,201,176) }
-code.cpp .user-type.generic { color: rgb(78,201,176) }
-code.cpp .user-type.reference { color: rgb(78,201,176) }
-code.cpp .user-type.value { color: rgb(78,201,176) }
-code.cpp .variable { color: rgb(200,200,200) }
+code.cpp .string .escape-character { color: var(--color-cpp-string-escape-character) }
+code.cpp .user-defined-literal.number { color: var(--color-cpp-user-defined-literal-number) }
+code.cpp .user-defined-literal.raw { color: var(--color-cpp-user-defined-literal-raw) }
+code.cpp .user-defined-literal.string { color: var(--color-cpp-user-defined-literal-string) }
+code.cpp .user-type{ color: var(--color-cpp-user-type) }
+code.cpp .user-type.generic { color: var(--color-cpp-user-type-generic) }
+code.cpp .user-type.reference { color: var(--color-cpp-user-type-reference) }
+code.cpp .user-type.value { color: var(--color-cpp-user-type-value) }
+code.cpp .variable{ color: var(--color-cpp-variable) }
 
 /* CSS */
-code .css .comment { color: rgb(87,166,74) }
-code .css .keyword { color: rgb(86,156,214) }
-code .css .property-name { color: rgb(156,220,254) }
-code .css .property-value { color: rgb(200,200,200) }
-code .css .selector { color: rgb(215,186,125) }
-code .css .string { color: rgb(214,157,133) }
+code.css .comment{ color: var(--color-css-comment) }
+code.css .keyword{ color: var(--color-css-keyword) }
+code.css .property-name{ color: var(--color-css-property-name) }
+code.css .property-value{ color: var(--color-css-property-value) }
+code.css .selector{ color: var(--color-css-selector) }
+code.css .string{ color: var(--color-css-string) }
 
 /* GLSL */
-code .glsl .function { color: rgb(255,175,95) }
-code .glsl .keyword { color: rgb(95,175,255) }
-code .glsl .userkeyword1 { color: rgb(175,95,255) }
-code .glsl .userkeyword2 { color: rgb(255,95,175) }
-code .glsl .variable { color: rgb(95,255,255) }
+code.glsl .function{ color: var(--color-glsl-function) }
+code.glsl .keyword{ color: var(--color-glsl-keyword) }
+code.glsl .userkeyword1{ color: var(--color-glsl-userkeyword1) }
+code.glsl .userkeyword2{ color: var(--color-glsl-userkeyword2) }
+code.glsl .variable{ color: var(--color-glsl-variable) }
 
 /* HTML */
-code .html .attribute-name { color: rgb(156,220,254) }
-code .html .attribute-value { color: rgb(200,200,200) }
-code .html .client-template-separator { color: rgb(220,220,220); font-weight: bold }
-code .html .client-template-tag { color: rgb(0,100,0); font-weight: bold }
-code .html .client-template-value { color: rgb(255,0,255) }
-code .html .comment { color: rgb(87,166,74) }
-code .html .element-name { color: rgb(86,156,214) }
-code .html .entity { color: rgb(0,160,160) }
-code .html .operator { color: rgb(180,180,180) }
-code .html .razor-code-background { color: rgb(220,220,220); background-color: rgb(80,80,80) }
-code .html .razor-tag-helper-attribute { color: rgb(0,128,128); font-weight: bold }
-code .html .razor-tag-helper-element { color: rgb(0,128,128); font-weight: bold }
-code .html .server-side-script { color: rgb(0,0,0); background-color: rgb(255,255,179) }
-code .html .tag-delimiter { color: rgb(128,128,128) }
+code.html .attribute-name{ color: var(--color-html-attribute-name) }
+code.html .attribute-value{ color: var(--color-html-attribute-value) }
+code.html .client-template-separator { color: var(--color-html-client-template-separator); font-weight: bold }
+code.html .client-template-tag { color: var(--color-html-client-template-tag); font-weight: bold }
+code.html .client-template-value{ color: var(--color-html-client-template-value) }
+code.html .comment{ color: var(--color-html-comment) }
+code.html .element-name{ color: var(--color-html-element-name) }
+code.html .entity{ color: var(--color-html-entity) }
+code.html .operator{ color: var(--color-html-operator) }
+code.html .razor-code-background { color: var(--color-html-razor-code-background); background-color: rgb(80,80,80) }
+code.html .razor-tag-helper-attribute { color: var(--color-html-razor-tag-helper-attribute); font-weight: bold }
+code.html .razor-tag-helper-element { color: var(--color-html-razor-tag-helper-element); font-weight: bold }
+code.html .server-side-script { color: var(--color-html-server-side-script); background-color: rgb(255,255,179) }
+code.html .tag-delimiter{ color: var(--color-html-tag-delimiter) }
 
 /* JSON */
-code .json .property-name { color: rgb(215,185,125) }
+code.json .property-name{ color: var(--color-json-property-name) }
 
 /* Regex */
-code .regex .alternation { color: rgb(5,195,186) }
-code .regex .anchor { color: rgb(249,121,174) }
-code .regex .character-class { color: rgb(46,171,254) }
-code .regex .comment { color: rgb(87,166,74) }
-code .regex .grouping { color: rgb(5,195,186) }
-code .regex .other-escape { color: rgb(255,214,143) }
-code .regex .quantifier { color: rgb(249,121,174) }
-code .regex .self-escaped-character { color: rgb(214,157,133); font-weight: bold }
-code .regex .text { color: rgb(214,157,133) }
+code.regex .alternation{ color: var(--color-regex-alternation) }
+code.regex .anchor{ color: var(--color-regex-anchor) }
+code.regex .character-class{ color: var(--color-regex-character-class) }
+code.regex .comment{ color: var(--color-regex-comment) }
+code.regex .grouping{ color: var(--color-regex-grouping) }
+code.regex .other-escape{ color: var(--color-regex-other-escape) }
+code.regex .quantifier{ color: var(--color-regex-quantifier) }
+code.regex .self-escaped-character { color: var(--color-regex-self-escaped-character); font-weight: bold }
+code.regex .text{ color: var(--color-regex-text) }

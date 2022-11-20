@@ -7,44 +7,67 @@
     <title>Henry Wilder Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.152 13">
+    <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <style>
-                .b {
-                    stroke-linejoin: round;
-                }
-                .b, .c {
-                    stroke: #88c7ff;
-                }
-                .b, .c, .d {
-                    stroke-width: 1.5px;
-                }
-                .b, .e {
-                    fill: #88c7ff;
-                }
-                .c, .d{
-                    fill: none;
-                    stroke-miterlimit: 10;
-                }
-                .d {
-                    stroke: #bb91dc;
-                }
+                .j,.k{stroke-width:1px;}
+                .j,.k,.l,.m,.n,.o{fill:none;}
+                .j,.k,.l,.m,.o{stroke-miterlimit:10;}
+                .j,.l{stroke:#f0cb96;}
+                .k,.p,.o{stroke:#88c7ff;}
+                .p,.n{stroke-linejoin:round;}
+                .p,.q{fill:#88c7ff;}
+                .l,.n{stroke-linecap:round;}
+                .r{fill:#ccc;}
+                .m{stroke:#ccc;}
+                .n{stroke:#bb91dc;}
             </style>
+            <symbol id="icon-function" viewBox="0 0 13 13">
+                <polygon class="n" points="11.181 8.856 11.181 3.425 6.5 .71 1.819 3.425 1.819 8.856 6.5 11.571 11.181 8.856"/>
+                <polyline class="n" points="2.048 3.558 6.5 6.14 10.952 3.558"/>
+                <line class="n" x1="6.5" y1="11.402" x2="6.5" y2="6.14"/>
+            </symbol>
+            <symbol id="icon-variable" viewBox="15 0 13 13">
+                <polyline class="o" points="26.817 3.095 22.479 .578 16.183 4.231"/>
+                <polygon class="p" points="20.521 6.747 16.183 4.231 16.183 9.264 20.521 11.781 26.817 8.128 26.817 3.095 20.521 6.747"/>
+            </symbol>
+            <symbol id="icon-type" viewBox="30 0 13 13">
+                <rect class="q" x="30" y="1.39" width="13" height="3.5"/><rect class="q" x="30" y="6.89" width="4.5" height="4.5"/>
+                <rect class="q" x="38.5" y="6.89" width="4.5" height="4.5"/>
+            </symbol>
+            <symbol id="icon-literal" viewBox="0 15 13 13">
+                <path class="r" d="M11.7,16.39c.165,0,.3,.135,.3,.3v8.9c0,.165-.135,.3-.3,.3H1.3c-.165,0-.3-.135-.3-.3v-8.9c0-.165,.135-.3,.3-.3H11.7m0-1H1.3c-.718,0-1.3,.582-1.3,1.3v8.9c0,.718,.582,1.3,1.3,1.3H11.7c.718,0,1.3-.582,1.3-1.3v-8.9c0-.718-.582-1.3-1.3-1.3h0Z"/>
+                <line class="o" x1="3.75" y1="20.14" x2="9.25" y2="20.14"/>
+                <line class="o" x1="3.75" y1="22.64" x2="9.25" y2="22.64"/>
+            </symbol>
+            <symbol id="icon-macro" viewBox="15 15 13 13">
+                <line class="m" x1="15.5" y1="15.89" x2="15.5" y2="26.39"/>
+                <line class="m" x1="27.5" y1="15.89" x2="27.5" y2="26.39"/>
+                <path class="q" d="M19,17.14v8c0,.206,.235,.324,.4,.2l5.333-4c.133-.1,.133-.3,0-.4l-5.333-4c-.165-.124-.4-.006-.4,.2Z"/>
+            </symbol>
+            <symbol id="icon-enum-val" viewBox="30 15 13 13">
+                <path class="o" d="M38.75,21.14h2.25c.276,0,.5-.224,.5-.5v-3.5c0-.276-.224-.5-.5-.5h-4.5c-.276,0-.5,.224-.5,.5v1.75h5.5"/>
+                <g>
+                    <rect class="k" x="31.5" y="21.14" width="5.5" height="4.5"/>
+                    <rect class="q" x="31.5" y="21.14" width="5.5" height="1.75"/>
+                    <rect class="q" x="31.5" y="23.89" width="5.5" height="1.75"/>
+                </g>
+            </symbol>
+            <symbol id="icon-enum-class" viewBox="0 30 13 13">
+                <path class="l" d="M8,36.14h3c.276,0,.5-.224,.5-.5v-3.5c0-.276-.224-.5-.5-.5H6.5c-.276,0-.5,.224-.5,.5v1.75h5.5"/>
+                <g>
+                    <rect class="j" x="1.5" y="36.14" width="5.5" height="4.5" rx=".5" ry=".5"/>
+                    <line class="j" x1="1.5" y1="38.39" x2="7" y2="38.39"/>
+                </g>
+            </symbol>
+            <symbol id="icon-alias" viewBox="15 30 13 13">
+                <rect class="m" x="15.5" y="37.64" width="4.5" height="4.5"/>
+                <polyline class="m" points="20 36.14 20 31.39 26.25 31.39 26.25 39.89 21.5 39.89"/>
+                <line class="m" x1="21.5" y1="33.64" x2="24.75" y2="33.64"/>
+                <line class="m" x1="21.5" y1="35.64" x2="24.75" y2="35.64"/>
+                <line class="m" x1="21.5" y1="37.64" x2="24.75" y2="37.64"/>
+            </symbol>
         </defs>
-        <symbol id="icon-function" viewBox="0 0 13 13">
-            <polygon class="d" points="10.832 9.533 10.832 3.467 5.604 .434 .375 3.467 .375 9.533 5.604 12.566 10.832 9.533"/>
-            <polyline class="d" points=".63 3.615 5.604 6.5 10.578 3.615"/>
-            <line class="d" x1="5.604" y1="12.378" x2="5.604" y2="6.5"/>
-        </symbol>
-        <symbol id="icon-variable" viewBox="15.24 0 13 13">
-            <polyline class="c" points="26.599 3.166 21.905 .443 15.092 4.395"/>
-            <polygon class="b" points="19.787 7.118 15.092 4.395 15.092 9.841 19.787 12.564 26.599 8.612 26.599 3.166 19.787 7.118"/>
-        </symbol>
-        <symbol id="icon-type" viewBox="30.5 0 13 13">
-            <rect class="e" x="29.152" y="1.875" width="13" height="3.25"/>
-            <rect class="e" x="29.152" y="7.25" width="4.325" height="4.325"/>
-            <rect class="e" x="37.827" y="7.25" width="4.325" height="4.325"/>
-        </symbol>
     </svg>
 </head>
 <body>
@@ -88,22 +111,23 @@
             </div>
             <div class="line">
                 <div class="user-keyword">int</div>&nbsp;
-                <div class="function tooltip">main
-                    <span class="tooltiptext">
+                <div class="function has-tooltip">
+                    main
+                    <span class="tooltip">
                         <div class="declaration">
-                            <svg height="10px" viewbox="0 0 13 13">
-                                <use href="#icon-function"/>
-                            </svg>&nbsp;
+                            <svg width="10.75px" height="10.75px"><use href="#icon-function"/></svg>&nbsp;
                             <div class="user-keyword">int</div>&nbsp;
                             <div class="function">main</div>
-                            <div class="punctuation">&lpar;&rpar;</div>
+                            <div class="punctuation">(</div>
+                            <div class="punctuation">)</div>
                         </div>
                         <p>
                             does stuff
                         </p>
                     </span>
                 </div>
-                <div class="punctuation">()</div>
+                <div class="punctuation">(</div>
+                <div class="punctuation">)</div>
             </div>
             <div class="line">
                 <div class="punctuation">{</div>
@@ -114,7 +138,20 @@
                 <div class="operator">::</div>
                 <div class="variable">cout</div>&nbsp;
                 <div class="operator-overloaded">&lt;&lt;</div>&nbsp;
-                <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+                <div class="has-tooltip">
+                    <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+                    <div class="tooltip">
+                        <div class="declaration">
+                            <svg width="10.75px" height="10.75px"><use href="#icon-literal"/></svg>&nbsp;
+                            <div class="punctuation">(</div>
+                            <div class="user-keyword">const char</div>&nbsp;
+                            <div class="punctuation">[</div>
+                            <div class="user-defined-literal number">14</div>
+                            <div class="punctuation">])</div>
+                            <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="punctuation">;</div>
             </div>
             <div class="line">
