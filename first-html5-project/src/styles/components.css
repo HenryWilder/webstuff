@@ -228,6 +228,8 @@ article {
     padding: 0.1875rem;
 }
 .skill-pill {
+    --key-shadow-color: rgba(0,0,0,0.45);
+    --ambient-shadow-color: rgba(0,10,30,0.35);
     --float-height: 4px;
     border-radius: 9999px;
     padding: 5px 10px;
@@ -236,7 +238,7 @@ article {
     background-color: lightgray;
     font-size: small;
     font-weight: bold;
-    box-shadow: 0 0 0 -1px rgb(0,0,0,1), 0 0 0 -1px rgb(0,10,30,1);
+    box-shadow: 0 0 0 -1px black, 0 0 0 -1px black;
     transition: 400ms ease-in-out;
     position: relative;
     left: 0;
@@ -246,7 +248,7 @@ article {
     cursor: default;
 }
 .skill-pill-wrapper:hover .skill-pill {
-    box-shadow: 0 var(--float-height) 2px rgb(0,0,0,0.45), 0 var(--float-height) 7px rgb(0,10,30,0.35);
+    box-shadow: 0 var(--float-height) 2px var(--key-shadow-color), 0 var(--float-height) 7px var(--ambient-shadow-color);
     top: calc(-1 * var(--float-height));
     transition: 50ms ease-out;
 }

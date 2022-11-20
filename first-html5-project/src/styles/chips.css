@@ -31,23 +31,27 @@
         background-color: #5884a4;
         color: #fff;
     }
-    .skill-pill.adobe-ps {
+    .skill-pill.adobe.ps {
+        --key-shadow-color: #041c34a0;
         background-color: #041c34;
         color: #31a8ff;
     }
-    .skill-pill.adobe-ai {
+    .skill-pill.adobe.ai {
+        --key-shadow-color: #2c110ea0;
         background-color: #2c110e;
         color: #f6991b;
     }
-    .skill-pill.adobe-id {
+    .skill-pill.adobe.id {
+        --key-shadow-color: #411021a0;
         background-color: #411021;
         color: #e64869;
     }
-    .skill-pill.adobe-ae {
+    .skill-pill.adobe.ae {
+        --key-shadow-color: #00005ba0;
         background-color: #00005b;
         color: #9999ff;
     }
-    .skill-pill.adobe-ps, .skill-pill.adobe-ai, .skill-pill.adobe-id, .skill-pill.adobe-ae {
+    .skill-pill.adobe {
         font-family: "Myriad Pro", Myriad, sans-serif;
         width: 1.75rem;
         text-align: center;
@@ -63,12 +67,52 @@
     .skill-pill.subst-de {
         background-color: #ef4b25;
         color: #fff;
+        border-radius: 20%;
     }
     .skill-pill.subst-pa, .skill-pill.subst-de {
-        width: 3.5ch;
+        width: 3.55ch;
         padding-left: 0px;
         padding-right: 0px;
         text-align: center;
+    }
+
+    .skill-pill.three-dee-studio {
+        --key-shadow-color: #376a7f;
+        background-color: #38a6ca;
+        border-left-color: #7dc7de;
+        color: #fff;
+    }
+    .skill-pill.autocad {
+        --key-shadow-color: #780829;
+        background-color: #e51051;
+        border-left-color: #e95985;
+        color: #fff;
+    }
+    .skill-pill.inventor {
+        --key-shadow-color: #715b01;
+        background-color: #dcaf03;
+        border-left-color: #edcc5f;
+        color: #fff;
+    }
+    .skill-pill.autodesk {
+        font-family: 'Artifakt', sans-serif;
+        width: 1.65rem;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        border-radius: 0;
+        border-top-right-radius: 15%;
+        border-left-style: solid;
+        border-left-width: 5px;
+    }
+
+    .skill-pill.vs {
+        background-color: #b179f1;
+        color: rgb(30,30,30);
+    }
+    .skill-pill.vsc {
+        background-color: #35a6f1;
+        color: rgb(30,30,30);
     }
 
     .skill-pill.ui, .skill-pill.ux {
