@@ -71,35 +71,32 @@
     </svg>
 </head>
 <body>
-    <div class="container-with-label">
-        <section class="container">
-            <div class="container-label">Areas</div>
-            <div id="card-grid">
-                <div class="gallery-card">
-                    <img src="./resource/metaball.gif" alt="Metaball simulation" />
-                    <!-- Todo: add slidshow to switch between images -->
-                    <div class="gallery-card-cover cpp"></div>
-                    <p>C++</p>
-                </div>
-                <div class="gallery-card">
-                    <img src="./resource/solarsystem.gif" alt="Proceedurally generated solar system" />
-                    <div class="gallery-card-cover cs"></div>
-                    <p>C#</p>
-                </div>
-                <div class="gallery-card">
-                    <div class="gallery-card-cover ts"></div>
-                    <p>JS/TS</p>
-                </div>
-                <div class="gallery-card">
-                    <div class="gallery-card-cover three-dee"></div>
-                    <p>3D</p>
-                </div>
+    <section class="container">
+        <div id="card-grid">
+            <div class="gallery-card">
+                <img src="./resource/metaball.gif" alt="Metaball simulation" />
+                <!-- Todo: add slidshow to switch between images -->
+                <div class="gallery-card-cover cpp"></div>
+                <p>C++</p>
             </div>
-        </section>
-    </div>
+            <div class="gallery-card">
+                <img src="./resource/solarsystem.gif" alt="Proceedurally generated solar system" />
+                <div class="gallery-card-cover cs"></div>
+                <p>C#</p>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-card-cover ts"></div>
+                <p>JS/TS</p>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-card-cover three-dee"></div>
+                <p>3D</p>
+            </div>
+        </div>
+    </section>
 
-    <section>
-        <h2>Example C++</h2>
+    <section class="container">
+        <h3>Example C++</h3>
         <code class="cpp" id="cpp-example1">
             <label for="cpp-example1">example1.cpp</label>
 
@@ -171,22 +168,21 @@
     </section>
 
     <section class="container">
-        <h2>Primary</h2>
-        <div id="skill-list">
+        <h3>Primary</h3>
+        <div class="skill-list" style="border-bottom: 1px solid lightgray;">
             <div class="skill-pill-wrapper"><div class="skill-pill cpp">C++</div></div>
             <div class="skill-pill-wrapper"><div class="skill-pill cs">C#</div></div>
-            <div class="skill-pill-wrapper"><div class="skill-pill js">JS</div></div>
-            <div class="skill-pill-wrapper"><div class="skill-pill ts">TS</div></div>
         </div>
-    </section>
-
-    <section class="container">
-        <h2>High Proficiency</h2>
-        <div id="skill-list">
-            <div class="skill-pill-wrapper"><div class="skill-pill cpp">C++</div></div>
-            <div class="skill-pill-wrapper"><div class="skill-pill cs">C#</div></div>
-            <div class="skill-pill-wrapper"><div class="skill-pill js">JS</div></div>
-            <div class="skill-pill-wrapper"><div class="skill-pill ts">TS</div></div>
+        <h3>High Proficiency</h3>
+        <div class="skill-list" style="border-bottom: 1px solid lightgray;">
+            <abbr title="Unreal Engine 4"><div class="skill-pill-wrapper"><div class="skill-pill ue4">UE4</div></div></abbr>
+            <abbr title="JavaScript"><div class="skill-pill-wrapper"><div class="skill-pill js">JS</div></div></abbr>
+            <abbr title="TypeScript"><div class="skill-pill-wrapper"><div class="skill-pill ts">TS</div></div></abbr>
+            <abbr title="HyperText Markup Language (5)"><div class="skill-pill-wrapper"><div class="skill-pill html">HTML5</div></div></abbr>
+            <abbr title="Cascading Style Sheets"><div class="skill-pill-wrapper"><div class="skill-pill css">CSS</div></div></abbr>
+        </div>
+        <h3>Basic Proficiency</h3>
+        <div class="skill-list">
         </div>
     </section>
 
