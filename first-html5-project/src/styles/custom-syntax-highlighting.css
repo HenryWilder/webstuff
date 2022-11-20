@@ -59,7 +59,7 @@ code {
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none;
 
-    color: rgb(220,220,220);
+    color: var(--color-plain-text);
     background-color: rgb(30,30,30);
     font-family: 'Consolas', monospace;
     display: block;
@@ -83,6 +83,8 @@ code {
         font-size: 13px;
 
         /* Screen colors */
+        --color-plain-text: rgb(220,220,220);
+
         --color-comment: rgb(87,166,74);
         --color-preprocessor: rgb(220,220,220);
         --color-preprocessor-keyword: rgb(155,155,155);
@@ -184,7 +186,9 @@ code {
         background-color: transparent;
 
         /* Print colors */
-        --color-comment: rgb();
+        --color-plain-text: rgb(0,0,0);
+
+        --color-comment: rgb(0,128,0);
         --color-preprocessor: rgb();
         --color-preprocessor-keyword: rgb();
         --color-identifier: rgb();
@@ -201,50 +205,50 @@ code {
         --color-excluded-code: rgb();
 
         /* C/C++ */
-        --color-c-cpp-user-keyword: rgb();
-        --color-cpp-class-template: rgb();
-        --color-cpp-enumerator: rgb();
-        --color-cpp-field: rgb();
-        --color-cpp-function-template: rgb();
-        --color-cpp-function: rgb();
-        --color-cpp-keyword-control: rgb();
-        --color-cpp-label: rgb();
-        --color-cpp-local-variable: rgb();
-        --color-cpp-macro: rgb();
-        --color-cpp-member-function: rgb();
-        --color-cpp-member-operator-function: rgb();
-        --color-cpp-namespace: rgb();
-        --color-cpp-new-delete-operator-function: rgb();
-        --color-cpp-operator-function: rgb();
-        --color-cpp-parameter: rgb();
-        --color-cpp-property: rgb();
-        --color-cpp-static-field: rgb();
-        --color-cpp-static-member-function: rgb();
-        --color-cpp-string-delimiter-character: rgb();
-        --color-cpp-string-escape-character: rgb();
-        --color-cpp-user-defined-literal-number: rgb();
-        --color-cpp-user-defined-literal-raw: rgb();
-        --color-cpp-user-defined-literal-string: rgb();
-        --color-cpp-user-type: rgb();
-        --color-cpp-user-type-generic: rgb();
-        --color-cpp-user-type-reference: rgb();
-        --color-cpp-user-type-value: rgb();
-        --color-cpp-variable: rgb();
+        --color-c-cpp-user-keyword: rgb(0,0,255);
+        --color-cpp-class-template: rgb(43,145,175);
+        --color-cpp-enumerator: rgb(47,79,79);
+        --color-cpp-field: rgb(0,0,0);
+        --color-cpp-function-template: rgb(116,83,31);
+        --color-cpp-function: rgb(116,83,31);
+        --color-cpp-keyword-control: rgb(143,8,196);
+        --color-cpp-label: rgb(0,0,0);
+        --color-cpp-local-variable: rgb(31,55,127);
+        --color-cpp-macro: rgb(138,27,255);
+        --color-cpp-member-function: rgb(116,83,31);
+        --color-cpp-member-operator-function: rgb(0,128,128);
+        --color-cpp-namespace: rgb(0,0,0);
+        --color-cpp-new-delete-operator-function: rgb(0,0,255);
+        --color-cpp-operator-function: rgb(0,128,128);
+        --color-cpp-parameter: rgb(128,128,128);
+        --color-cpp-property: rgb(0,0,0);
+        --color-cpp-static-field: rgb(0,0,0);
+        --color-cpp-static-member-function: rgb(116,83,31);
+        --color-cpp-string-delimiter-character: rgb(226,31,31);
+        --color-cpp-string-escape-character: rgb(183,118,251);
+        --color-cpp-user-defined-literal-number: rgb(0,0,0);
+        --color-cpp-user-defined-literal-raw: rgb(0,0,0);
+        --color-cpp-user-defined-literal-string: rgb(163,21,21);
+        --color-cpp-user-type: rgb(43,145,175);
+        --color-cpp-user-type-generic: rgb(43,145,175);
+        --color-cpp-user-type-reference: rgb(43,145,175);
+        --color-cpp-user-type-value: rgb(43,145,175);
+        --color-cpp-variable: rgb(0,0,0);
 
         /* CSS */
-        --color-css-comment: rgb();
-        --color-css-keyword: rgb();
-        --color-css-property-name: rgb();
-        --color-css-property-value: rgb();
-        --color-css-selector: rgb();
-        --color-css-string: rgb();
+        --color-css-comment: rgb(0,100,0);
+        --color-css-keyword: rgb(128,0,128);
+        --color-css-property-name: rgb(255,0,0);
+        --color-css-property-value: rgb(0,0,255);
+        --color-css-selector: rgb(128,0,0);
+        --color-css-string: rgb(0,0,255);
 
         /* GLSL */
-        --color-glsl-function: rgb();
-        --color-glsl-keyword: rgb();
-        --color-glsl-userkeyword1: rgb();
-        --color-glsl-userkeyword2: rgb();
-        --color-glsl-variable: rgb();
+        --color-glsl-function: rgb(255,175,95);
+        --color-glsl-keyword: rgb(95,175,255);
+        --color-glsl-userkeyword1: rgb(175,95,255);
+        --color-glsl-userkeyword2: rgb(255,95,175);
+        --color-glsl-variable: rgb(95,255,255);
 
         /* HTML */
         --color-html-attribute-name: rgb();
