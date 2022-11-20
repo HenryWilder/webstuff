@@ -95,7 +95,7 @@ code {
         --color-operator-overloaded: rgb(220,220,170);
         --color-punctuation: rgb(220,220,220);
         --color-type: rgb(78,201,176);
-        --color-enum: rgb(184,215,163);
+        --color-enum: rgb(184,215,163); /* Enum member */
         --color-literal: rgb(218,218,218);
         --color-number: rgb(181,206,168);
         --color-string: rgb(214,157,133);
@@ -197,12 +197,13 @@ code {
         --color-operator: rgb(0,0,0);
         --color-operator-overloaded: rgb(116,83,31);
         --color-punctuation: rgb(0,0,0);
-        --color-type: rgb();
-        --color-enum: rgb();
+        --color-type: rgb(43,145,175);
+        --color-enum: rgb(0,0,0); /* Enum member */
         --color-literal: rgb(0,0,0);
-        --color-number: rgb();
-        --color-string: rgb();
-        --color-excluded-code: rgb();
+        --color-number: rgb(0,0,0);
+        --color-string: rgb(163,21,21);
+        --color-string-escape-character: rgb(183,118,251);
+        --color-excluded-code: rgb(128,128,128);
 
         /* C/C++ */
         --color-c-cpp-user-keyword: rgb(0,0,255);
