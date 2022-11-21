@@ -1,4 +1,8 @@
 @media only screen {
+    .skill-pill {
+        background-color: rgb(179, 235, 177);
+        color: rgb(8, 85, 5);
+    }
     .skill-pill.cpp {
         background-color: #00599c;
         color: #fff;
@@ -51,14 +55,6 @@
         background-color: #00005b;
         color: #9999ff;
     }
-    .skill-pill.adobe {
-        font-family: "Myriad Pro", Myriad, sans-serif;
-        width: 1.75rem;
-        text-align: center;
-        padding-left: 0px;
-        padding-right: 0px;
-        border-radius: 25%;
-    }
 
     .skill-pill.subst-pa {
         background-color: #e1262f;
@@ -67,7 +63,6 @@
     .skill-pill.subst-de {
         background-color: #ef4b25;
         color: #fff;
-        border-radius: 20%;
     }
     .skill-pill.subst-pa, .skill-pill.subst-de {
         width: 3.55ch;
@@ -94,17 +89,6 @@
         border-left-color: #edcc5f;
         color: #fff;
     }
-    .skill-pill.autodesk {
-        font-family: 'Artifakt', sans-serif;
-        width: 1.65rem;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        border-radius: 0;
-        border-top-right-radius: 15%;
-        border-left-style: solid;
-        border-left-width: 5px;
-    }
 
     .skill-pill.vs {
         background-color: #b179f1;
@@ -113,6 +97,22 @@
     .skill-pill.vsc {
         background-color: #35a6f1;
         color: rgb(30,30,30);
+    }
+    
+    .skill-pill.word {
+        --key-shadow-color: #071e42;
+        background: #196ca4 linear-gradient(to top left, #1146ac, #2368c4);
+        color: #fff;
+    }
+    .skill-pill.excel {
+        --key-shadow-color: #0b2a19;
+        background: #1e7145 linear-gradient(to top left, #0b6631, #18884f);
+        color: #fff;
+    }
+    .skill-pill.access {
+        --key-shadow-color: #420a0f;
+        background: #b32637 linear-gradient(to top left, #9d1623, #b72c3f);
+        color: #fff;
     }
 
     .skill-pill.ui, .skill-pill.ux {
@@ -135,9 +135,52 @@
         }
     }
 }
-@media only print {
+@media print {
+    .skill-list::before {
+        content: attr(title);
+        font-size: small;
+    }
     .skill-pill {
         background-color: white;
+        color: black;
         border: 1px solid lightgray;
+        box-shadow: none;
     }
+    .skill-pill.subst-pa::after {
+        content: "ubstance Painter";
+    }
+    .skill-pill.subst-de::after {
+        content: "ubstance Designer";
+    }
+}
+
+.skill-pill.autodesk {
+    font-family: 'Artifakt', sans-serif;
+    width: 1.65rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-left-style: solid;
+    border-left-width: 5px;
+}
+.skill-pill.subst-de {
+    border-radius: 5px;
+}
+.skill-pill.adobe {
+    font-family: "Myriad Pro", Myriad, sans-serif;
+    width: 1.75rem;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 5px;
+}
+.skill-pill.microsoft {
+    width: 1.75rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
 }
