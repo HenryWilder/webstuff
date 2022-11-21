@@ -70,201 +70,211 @@
         </defs>
     </svg>
 </head>
-<body>
-    <section class="container">
-        <div id="card-grid">
-            <div class="gallery-card">
-                <img src="./resource/metaball.gif" alt="Metaball simulation" />
-                <!-- Todo: add slidshow to switch between images -->
-                <div class="gallery-card-cover cpp"></div>
-                <p>C++</p>
+<body style="display:flex;flex-flow:row nowrap">
+    <nav style="position:relative;width:150px;background-color:white;padding:4px">
+        <section style="position:sticky">
+            <div style="width:100%;text-align:center;">
+                <h1>Henry</h1>
+                <h1>Wilder</h1>
             </div>
-            <div class="gallery-card">
-                <img src="./resource/solarsystem.gif" alt="Proceedurally generated solar system" />
-                <div class="gallery-card-cover cs"></div>
-                <p>C#</p>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-card-cover ts"></div>
-                <p>JS/TS</p>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-card-cover three-dee"></div>
-                <p>3D</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>Example C++</h3>
-        <code class="cpp" id="cpp-example1">
-            <label for="cpp-example1">example1.cpp</label>
-
-            <div class="line">
-                <div class="preprocessor keyword">#include</div>&nbsp;
-                <div class="string" open-seq="&lt;" close-seq="&gt;">iostream</div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="line">
-                <div class="comment">// Hi! I'm a comment! :)</div>
-            </div>
-
-            <div class="line">
-                <div class="user-keyword">int</div>&nbsp;
-                <div class="function has-tooltip">
-                    main
-                    <span class="tooltip">
-                        <div class="declaration">
-                            <svg width="10.75px" height="10.75px"><use href="#icon-function"/></svg>&nbsp;
-                            <div class="user-keyword">int</div>&nbsp;
-                            <div class="function">main</div>
-                            <div class="punctuation">(</div>
-                            <div class="punctuation">)</div>
-                        </div>
-                        <p>
-                            does stuff
-                        </p>
-                    </span>
+            <div class="labeled-squircle" role="button">
+                <div class="squircle-container">
+                    <div class="squircle"></div>
                 </div>
-                <div class="punctuation">(</div>
-                <div class="punctuation">)</div>
+                <label for="squircle">About</label>
             </div>
-
-            <div class="line">
-                <div class="punctuation">{</div>
+            <div class="labeled-squircle" role="button">
+                <div class="squircle-container">
+                    <div class="squircle"></div>
+                </div>
+                <label for="squircle">Skills</label>
             </div>
+            <div class="labeled-squircle" role="button">
+                <div class="squircle-container">
+                    <div class="squircle"></div>
+                </div>
+                <label for="squircle">Projects</label>
+            </div>
+        </section>
+    </nav>
 
-            <div class="line">
-                <div class="scope"></div>
-                <div class="namespace">std</div>
-                <div class="operator">::</div>
-                <div class="variable">cout</div>&nbsp;
-                <div class="operator-overloaded">&lt;&lt;</div>&nbsp;
-                <div class="has-tooltip">
-                    <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
-                    <div class="tooltip">
-                        <div class="declaration">
-                            <svg width="10.75px" height="10.75px"><use href="#icon-literal"/></svg>&nbsp;
-                            <div class="punctuation">(</div>
-                            <div class="user-keyword">const char</div>&nbsp;
-                            <div class="punctuation">[</div>
-                            <div class="user-defined-literal number">14</div>
-                            <div class="punctuation">])</div>
-                            <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+    <main>
+        <section class="container" style="display: none;">
+            <div id="card-grid">
+                <div class="gallery-card">
+                    <img src="./resource/metaball.gif" alt="Metaball simulation" />
+                    <!-- Todo: add slidshow to switch between images -->
+                    <div class="gallery-card-cover cpp"></div>
+                    <p>C++</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="./resource/solarsystem.gif" alt="Proceedurally generated solar system" />
+                    <div class="gallery-card-cover cs"></div>
+                    <p>C#</p>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-card-cover ts"></div>
+                    <p>JS/TS</p>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-card-cover three-dee"></div>
+                    <p>3D</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="display: none;">
+            <h3>Example C++</h3>
+            <code class="cpp" id="cpp-example1">
+                <label for="cpp-example1">example1.cpp</label>
+
+                <div class="line">
+                    <div class="preprocessor keyword">#include</div>&nbsp;
+                    <div class="string" open-seq="&lt;" close-seq="&gt;">iostream</div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="line">
+                    <div class="comment">// Hi! I'm a comment! :)</div>
+                </div>
+
+                <div class="line">
+                    <div class="user-keyword">int</div>&nbsp;
+                    <div class="function has-tooltip">
+                        main
+                        <span class="tooltip">
+                            <div class="declaration">
+                                <svg width="10.75px" height="10.75px"><use href="#icon-function"/></svg>&nbsp;
+                                <div class="user-keyword">int</div>&nbsp;
+                                <div class="function">main</div>
+                                <div class="punctuation">(</div>
+                                <div class="punctuation">)</div>
+                            </div>
+                            <p>
+                                does stuff
+                            </p>
+                        </span>
+                    </div>
+                    <div class="punctuation">(</div>
+                    <div class="punctuation">)</div>
+                </div>
+
+                <div class="line">
+                    <div class="punctuation">{</div>
+                </div>
+
+                <div class="line">
+                    <div class="scope"></div>
+                    <div class="namespace">std</div>
+                    <div class="operator">::</div>
+                    <div class="variable">cout</div>&nbsp;
+                    <div class="operator-overloaded">&lt;&lt;</div>&nbsp;
+                    <div class="has-tooltip">
+                        <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+                        <div class="tooltip">
+                            <div class="declaration">
+                                <svg width="10.75px" height="10.75px"><use href="#icon-literal"/></svg>&nbsp;
+                                <div class="punctuation">(</div>
+                                <div class="user-keyword">const char</div>&nbsp;
+                                <div class="punctuation">[</div>
+                                <div class="user-defined-literal number">14</div>
+                                <div class="punctuation">])</div>
+                                <div class="user-defined-literal string" open-seq="&quot;" close-seq="&quot;">Hello, world!</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="punctuation">;</div>
                 </div>
-                <div class="punctuation">;</div>
-            </div>
 
-            <div class="line">
-                <div class="punctuation">}</div>
-            </div>
+                <div class="line">
+                    <div class="punctuation">}</div>
+                </div>
 
-            <div class="line"></div>
-        </code>
-    </section>
-
-    <section class="container">
-        <section style="display:flex;flex-flow:column nowrap;gap:5px;padding:5px">
-            <h3>High Proficiency</h3>
-            <h5>Languages</h5>
-            <div class="skill-list">
-                <div class="skill-pill-wrapper"><div class="skill-pill cpp">C++</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill cs">C#</div></div>
-                <abbr title="Unreal Engine 4"><div class="skill-pill-wrapper"><div class="skill-pill ue4">UE4</div></div></abbr>
-                <abbr title="TypeScript"><div class="skill-pill-wrapper"><div class="skill-pill ts">TS</div></div></abbr>
-                <abbr title="JavaScript"><div class="skill-pill-wrapper"><div class="skill-pill js">JS</div></div></abbr>
-                <abbr title="Open Graphics Library (OpenGL) Shading Language"><div class="skill-pill-wrapper"><div class="skill-pill glsl">GLSL</div></div></abbr>
-            </div>
-            <h5>Formats</h5>
-            <div class="skill-list">
-                <abbr title="HyperText Markup Language"><div class="skill-pill-wrapper"><div class="skill-pill html">HTML</div></div></abbr>
-                <abbr title="HyperText Markup Language (5)"><div class="skill-pill-wrapper"><div class="skill-pill html">HTML5</div></div></abbr>
-                <abbr title="Cascading Style Sheets"><div class="skill-pill-wrapper"><div class="skill-pill css">CSS</div></div></abbr>
-            </div>
-            <h5>Concepts</h5>
-            <div class="skill-list">
-                <div class="skill-pill-wrapper"><div class="skill-pill">Shaders</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill">Shader Graphs</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill">Game Design</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill">Graphic Design</div></div>
-                <abbr title="User Interface"><div class="skill-pill-wrapper"><div class="skill-pill ui">UI</div></div></abbr>
-                <abbr title="User Experience"><div class="skill-pill-wrapper"><div class="skill-pill ux">UX</div></div></abbr>
-            </div>
-            <h5>Tools</h5>
-            <div class="skill-list" title="Adobe">
-                <abbr title="Adobe Illustrator"><div class="skill-pill-wrapper"><div class="skill-pill adobe ai">Ai</div></div></abbr>
-                <abbr title="Adobe Photoshop"><div class="skill-pill-wrapper"><div class="skill-pill adobe ps">Ps</div></div></abbr>
-                <abbr title="Adobe After Effects"><div class="skill-pill-wrapper"><div class="skill-pill adobe ae">Ae</div></div></abbr>
-                <abbr title="Adobe InDesign"><div class="skill-pill-wrapper"><div class="skill-pill adobe id">Id</div></div></abbr>
-            </div>
-            <div class="skill-list" title="Substance">
-                <abbr title="Substance Painter"><div class="skill-pill-wrapper"><div class="skill-pill subst-pa">S</div></div></abbr>
-                <abbr title="Substance Designer"><div class="skill-pill-wrapper"><div class="skill-pill subst-de">S</div></div></abbr>
-            </div>
-            <div class="skill-list" title="Autodesk">
-                <abbr title="Autodesk 3DS Max"><div class="skill-pill-wrapper"><div class="skill-pill autodesk three-dee-studio">3</div></div></abbr>
-                <abbr title="Autodesk AutoCAD"><div class="skill-pill-wrapper"><div class="skill-pill autodesk autocad">A</div></div></abbr>
-                <abbr title="Autodesk Inventor"><div class="skill-pill-wrapper"><div class="skill-pill autodesk inventor">I</div></div></abbr>
-            </div>
-            <div class="skill-list" title="Microsoft">
-                <abbr title="Microsoft Excel"><div class="skill-pill-wrapper"><div class="skill-pill microsoft excel">X</div></div></abbr>
-                <abbr title="Microsoft Access"><div class="skill-pill-wrapper"><div class="skill-pill microsoft access">A</div></div></abbr>
-                <abbr title="Microsoft Word"><div class="skill-pill-wrapper"><div class="skill-pill microsoft word">W</div></div></abbr>
-            </div>
-            <div class="skill-list" title="Visual Studio">
-                <div class="skill-pill-wrapper"><div class="skill-pill vs">Visual Studio 2019</div></div>
-                <abbr title="Visual Studio Code"><div class="skill-pill-wrapper"><div class="skill-pill vsc">VSCode</div></div></abbr>
-            </div>
+                <div class="line"></div>
+            </code>
         </section>
 
-        <section style="border-top:thin solid lightgray;display:flex;flex-flow:column nowrap;gap:5px;padding:5px">
-            <h3>Basic Proficiency</h3>
-            <h5>Languages</h5>
-            <div class="skill-list">
-                <div class="skill-pill-wrapper"><div class="skill-pill js">Java</div></div>
-            </div>
-            <h5>Concepts</h5>
-            <div class="skill-list">
-                <div class="skill-pill-wrapper"><div class="skill-pill">Linear Algebra</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill">Trigonometry</div></div>
-                <abbr title="Computer Science"><div class="skill-pill-wrapper"><div class="skill-pill">CS</div></div></abbr>
-            </div>
-            <h5>Tools</h5>
-            <div class="skill-list">
-                <abbr title="Global Information Tracker"><div class="skill-pill-wrapper"><div class="skill-pill git">Git</div></div></abbr>
-                <div class="skill-pill-wrapper"><div class="skill-pill cmd">Command Line</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill zb">ZBrush</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill winheader">Windows.h</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill blender">Blender</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill desmos">Desmos</div></div>
-                <div class="skill-pill-wrapper"><div class="skill-pill notepadpp">Nodepad++</div></div>
-            </div>
-        </section>
-    </section>
+        <section class="container">
+            <section style="display:flex;flex-flow:column nowrap;gap:5px;padding:5px">
+                <h3>High Proficiency</h3>
+                <h5>Languages</h5>
+                <div class="skill-list">
+                    <div class="skill-pill-wrapper"><div class="skill-pill cpp">C++</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill cs">C#</div></div>
+                    <abbr title="Unreal Engine 4"><div class="skill-pill-wrapper"><div class="skill-pill ue4">UE4</div></div></abbr>
+                    <abbr title="TypeScript"><div class="skill-pill-wrapper"><div class="skill-pill ts">TS</div></div></abbr>
+                    <abbr title="JavaScript"><div class="skill-pill-wrapper"><div class="skill-pill js">JS</div></div></abbr>
+                    <abbr title="Open Graphics Library (OpenGL) Shading Language"><div class="skill-pill-wrapper"><div class="skill-pill glsl">GLSL</div></div></abbr>
+                </div>
+                <h5>Formats</h5>
+                <div class="skill-list">
+                    <abbr title="HyperText Markup Language"><div class="skill-pill-wrapper"><div class="skill-pill html">HTML</div></div></abbr>
+                    <abbr title="HyperText Markup Language (5)"><div class="skill-pill-wrapper"><div class="skill-pill html">HTML5</div></div></abbr>
+                    <abbr title="Cascading Style Sheets"><div class="skill-pill-wrapper"><div class="skill-pill css">CSS</div></div></abbr>
+                </div>
+                <h5>Concepts</h5>
+                <div class="skill-list">
+                    <div class="skill-pill-wrapper"><div class="skill-pill">Shaders</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill">Shader Graphs</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill">Game Design</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill graphic-design">Graphic Design</div></div>
+                    <abbr title="User Interface"><div class="skill-pill-wrapper"><div class="skill-pill ui">UI</div></div></abbr>
+                    <abbr title="User Experience"><div class="skill-pill-wrapper"><div class="skill-pill ux">UX</div></div></abbr>
+                </div>
+                <h5>Tools</h5>
+                <table class="skill-list" style="width: fit-content;border-spacing:0.375rem;padding:0">
+                    <tr title="Adobe">
+                        <td><abbr title="Adobe Illustrator"><div class="skill-pill-wrapper"><div class="skill-pill adobe ai">Ai</div></div></abbr></td>
+                        <td><abbr title="Adobe Photoshop"><div class="skill-pill-wrapper"><div class="skill-pill adobe ps">Ps</div></div></abbr></td>
+                        <td><abbr title="Adobe After Effects"><div class="skill-pill-wrapper"><div class="skill-pill adobe ae">Ae</div></div></abbr></td>
+                        <td><abbr title="Adobe InDesign"><div class="skill-pill-wrapper"><div class="skill-pill adobe id">Id</div></div></abbr></td>
+                    </tr>
+                    <tr title="Autodesk">
+                        <td><abbr title="Autodesk 3DS Max"><div class="skill-pill-wrapper"><div class="skill-pill autodesk three-dee-studio">3</div></div></abbr></td>
+                        <td><abbr title="Autodesk AutoCAD"><div class="skill-pill-wrapper"><div class="skill-pill autodesk autocad">A</div></div></abbr></td>
+                        <td><abbr title="Autodesk Inventor"><div class="skill-pill-wrapper"><div class="skill-pill autodesk inventor">I</div></div></abbr></td>
+                    </tr>
+                    <tr title="Microsoft">
+                        <td><abbr title="Microsoft Excel"><div class="skill-pill-wrapper"><div class="skill-pill microsoft excel">X</div></div></abbr></td>
+                        <td><abbr title="Microsoft Access"><div class="skill-pill-wrapper"><div class="skill-pill microsoft access">A</div></div></abbr></td>
+                        <td><abbr title="Microsoft Word"><div class="skill-pill-wrapper"><div class="skill-pill microsoft word">W</div></div></abbr></td>
+                    </tr>
+                    <tr title="Substance">
+                        <td><abbr title="Substance Painter"><div class="skill-pill-wrapper"><div class="skill-pill subst-pa">S</div></div></abbr></td>
+                        <td><abbr title="Substance Designer"><div class="skill-pill-wrapper"><div class="skill-pill subst-de">S</div></div></abbr></td>
+                    </tr>
+                </table>
+                <div class="skill-list" title="Visual Studio">
+                    <div class="skill-pill-wrapper"><div class="skill-pill vs">Visual Studio 2019</div></div>
+                    <abbr title="Visual Studio Code"><div class="skill-pill-wrapper"><div class="skill-pill vsc">VSCode</div></div></abbr>
+                </div>
+            </section>
 
-    <section>
-        <div class="labeled-squircle">
-            <div class="squircle-container">
-                <div class="squircle"></div>
-            </div>
-            <label for="squircle">Label</label>
-        </div>
-        <div class="labeled-squircle">
-            <div class="squircle-container">
-                <div class="squircle"></div>
-            </div>
-            <label for="squircle">Label</label>
-        </div>
-        <div class="labeled-squircle">
-            <div class="squircle-container">
-                <div class="squircle"></div>
-            </div>
-            <label for="squircle">Label</label>
-        </div>
-    </section>
+            <section style="border-top:thin solid lightgray;display:flex;flex-flow:column nowrap;gap:5px;padding:5px">
+                <h3>Basic Proficiency</h3>
+                <h5>Languages</h5>
+                <div class="skill-list">
+                    <div class="skill-pill-wrapper"><div class="skill-pill js">Java</div></div>
+                </div>
+                <h5>Concepts</h5>
+                <div class="skill-list">
+                    <div class="skill-pill-wrapper"><div class="skill-pill">Linear Algebra</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill">Trigonometry</div></div>
+                    <abbr title="Computer Science"><div class="skill-pill-wrapper"><div class="skill-pill">CS</div></div></abbr>
+                </div>
+                <h5>Tools</h5>
+                <div class="skill-list">
+                    <abbr title="Global Information Tracker"><div class="skill-pill-wrapper"><div class="skill-pill git">Git</div></div></abbr>
+                    <div class="skill-pill-wrapper"><div class="skill-pill cmd">Command Line</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill zb">ZBrush</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill winheader">Windows.h</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill blender">Blender</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill desmos">Desmos</div></div>
+                    <div class="skill-pill-wrapper"><div class="skill-pill notepadpp">Nodepad++</div></div>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 </html>

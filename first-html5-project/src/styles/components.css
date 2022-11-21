@@ -264,6 +264,7 @@ article {
     background-image: linear-gradient(to right, white 0px calc(var(--squircle-diameter) + var(--padding-width) * 2), transparent calc(var(--squircle-width) + var(--padding-width) * 2));
     background-position-x: calc(0 - var(--padding-width));
     overflow: hidden;
+    cursor: pointer;
 }
 .labeled-squircle:hover {
     background-position-x: 0;
@@ -310,4 +311,13 @@ article {
 }
 .labeled-squircle:hover, .labeled-squircle:hover .squircle, .labeled-squircle:hover > label {
     transition: 100ms ease;
+}
+
+nav {
+    width: fit-content;
+}
+@media only print {
+    nav {
+        display: none;
+    }
 }

@@ -115,7 +115,7 @@
         color: #fff;
     }
 
-    .skill-pill.ui, .skill-pill.ux {
+    .skill-pill.ui, .skill-pill.ux, .skill-pill.graphic-design {
         background-image: linear-gradient(to top right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-attachment: fixed;
         background-size: 200% 200%;
@@ -136,10 +136,10 @@
     }
 }
 @media print {
-    .skill-list::before {
+    /* .skill-list::before {
         content: attr(title);
         font-size: small;
-    }
+    } */
     .skill-pill {
         background-color: white;
         color: black;
